@@ -379,7 +379,7 @@ $conn = $conexion->getConexion();
     $usuarioQ = mysqli_fetch_array($resultado, MYSQLI_NUM);
     $idUsuario = $usuarioQ[0];
 
-$queryProyectos="SELECT * FROM tbl_proyectos";
+$queryProyectos="SELECT * FROM tbl_proyectos WHERE id_usuario = '".$idUsuario."';";
 $results= mysqli_query($conexion->getConexion(), $queryProyectos);
 $contador = 0;
 foreach ($results as $result) {

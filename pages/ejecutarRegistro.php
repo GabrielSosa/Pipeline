@@ -43,6 +43,8 @@ $result3 = mysqli_query($conexion->getConexion(), $sql_insertar_persona);
 $sql_insertar_usuario = "INSERT INTO tbl_usuarios (id_usuario, usuario, password, id_persona, id_estado) VALUES ('$idUsuario', '$nombreUsuario', '$password', '$idPersona', 1);";  
 $result5 = mysqli_query($conexion->getConexion(), $sql_insertar_usuario);  
 
+//echo "<script>alert('Usuario Ingreaso con exito')</script>";
+
 
 header("location: index.php");
 ?>  
