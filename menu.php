@@ -15,6 +15,7 @@ function scripts(){
 			'<script src="js/jquery.nicescroll.js"></script>'.
 
 			'<!--common scripts for all pages-->'.
+			'<script src="js/CalculadoraPrincipal.js"></script>'.
 			'<script src="js/scripts.js"></script>';
 }
 
