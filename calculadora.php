@@ -139,7 +139,7 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#interesSimple">Calcular</span>
                                                         <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>

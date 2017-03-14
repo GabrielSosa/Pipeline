@@ -1,6 +1,6 @@
 <!--Aqui el primer modal de interes simple--> 
 
-                                <div class="modal fade" id="InteresSimple" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+                                <div class="modal fade" id="interesSimple" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -13,7 +13,6 @@
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
                                                 <form id="loginForm" class="form-horizontal">
-                                                <div>Esta es una ayuda y trata de kevin que quiere verle el boxer a Pedro</div>
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto</label>
                                                         <div class="col-xs-5">
