@@ -104,6 +104,7 @@
                                                 </a>
                                             </div>
                                          </div>
+
                                          <div class="col-lg-3 col-md-6">
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
@@ -118,8 +119,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#interesCompuesto" >Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#interesCompuesto"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -180,7 +181,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-bar-chart fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>TASA DE RENDIMIENTO</div>
