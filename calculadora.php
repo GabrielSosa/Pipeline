@@ -109,7 +109,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-line-chart fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>INTERES COMPUESTO</div>
@@ -130,7 +130,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-pie-chart fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>INTERES GENERADO</div>

@@ -54,19 +54,19 @@
                             </li>
                             <li class="">
                                <a data-toggle="tab" href="#home4">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-line-chart"></i>
                                     INTERES COMPUESTO
                             	</a>
                             </li>
                             <li class="">
                                <a data-toggle="tab" href="#home4">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-pie-chart"></i>
                                     VALOR PRESENTE
                             	</a>
                             </li>
                             <li class="">
                                <a data-toggle="tab" href="#home4">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-area-chart"></i>
                                     INVERSION PERMANENTE
                             	</a>
                             </li>
