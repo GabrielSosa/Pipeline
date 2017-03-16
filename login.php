@@ -23,13 +23,13 @@
 
 <div class="container">
 
-    <form class="form-signin" action="index.html">
+    <form class="form-signin" action="index.php">
         <div class="form-signin-heading text-center">
-            <h1 class="sign-title">Sign In</h1>
+            <h1 class="sign-title">Login</h1>
             <img src="images/login-logo.png" alt=""/>
         </div>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="User ID" autofocus>
+            <input type="text" class="form-control" placeholder="Usuario" autofocus>
             <input type="password" class="form-control" placeholder="Password">
 
             <button class="btn btn-lg btn-login btn-block" type="submit">
@@ -37,15 +37,15 @@
             </button>
 
             <div class="registration">
-                Not a member yet?
-                <a class="" href="registration.html">
-                    Signup
+               ¿No eres miembro?
+                <a class="" href="registrarse.php">
+                    Registrate
                 </a>
             </div>
             <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="remember-me"> Recuérdame
                 <span class="pull-right">
-                    <a data-toggle="modal" href="#myModal"> Forgot Password?</a>
+                    <a data-toggle="modal" href="#myModal"> ¿Olvidaste Contraseña?</a>
 
                 </span>
             </label>

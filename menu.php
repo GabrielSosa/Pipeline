@@ -25,11 +25,11 @@ function menu(){
 
 		        '<!--logo and iconic logo start-->'.
 		        '<div class="logo">'.
-		          '  <a href="index.html"><img src="images/logo.png" alt=""></a>'.
+		          '  <a href="index.php"><img src="images/logo.png" alt=""></a>'.
 		        '</div>'.
 
 		        '<div class="logo-icon text-center">'.
-		            '<a href="index.html"><img src="images/logo_icon.png" alt=""></a>'.
+		            '<a href="index.php"><img src="images/logo_icon.png" alt=""></a>'.
 		        '</div>'.
 		        '<!--logo and iconic logo end-->'.
 
@@ -42,7 +42,7 @@ function menu(){
 		                
 		                '<li><a href=""><i class="fa fa-pencil-square-o"></i> <span> Nuevo Proyecto</span></a></li>'.
 		                
-		                '<li><a href=""><i class="fa fa-calculator"></i> <span>Calculadora</span></a></li>'.
+		                '<li><a href="calculadora.php"><i class="fa fa-calculator"></i> <span>Calculadora</span></a></li>'.
 
 		                '<li><a href=""><i class="fa fa-user"></i> <span>Quienes Somos</span></a></li>'.
 
