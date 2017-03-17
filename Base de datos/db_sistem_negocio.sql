@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-03-2017 a las 02:25:29
+-- Tiempo de generación: 18-03-2017 a las 00:19:42
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -24,9 +24,17 @@ DELIMITER $$
 --
 -- Procedimientos
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_CREAR_PROYECTO` (IN `id_us` INT(11), IN `nom_pro` VARCHAR(100), IN `descr` VARCHAR(100), IN `peri` INT(5), IN `inte` FLOAT, IN `tiem` INT(11), IN `grad` FLOAT, IN `mont_prest` FLOAT, IN `sald_pa` FLOAT, IN `entradaefect` FLOAT, IN `salidaefect` FLOAT)  BEGIN
-	INSERT into tbl_proyectos (id_usuario,nombre_proyecto,descripcion,periodo,interes,tiempo,gradiante,monto_prestamo,saldo_pagado,entrada_efectivo,salida_efectivo) values(id_proyec,id_us,nom_pro,descr,peri,inte,tiem,grad,mont_prest,sald_pa,entradaefect,salidaefect);
-END$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_CREAR_PROYECTO` (IN `P_ID_USUARIO` INT(11), IN `P_NOMBRE_PROYECTO` VARCHAR(100), IN `P_DESCRIPCION` VARCHAR(100), IN `P_PERIODO` INT(5), IN `P_INTERES` FLOAT, IN `P_TIEMPO` INT(11), IN `P_GRADIANTE` FLOAT, IN `P_MONTO_PRESTAMO` FLOAT, IN `P_SALDO_PAGADO` FLOAT, IN `P_ENTRADA_EFECTIVO` FLOAT, IN `P_SALIDA_EFECTIVO` FLOAT, OUT `P_MENSAJE` VARCHAR(200))  BEGIN
+    	DECLARE V_CANTIDAD_NOMBRES INT;
+        SELECT  COUNT(*) INTO V_CANTIDAD_NOMBRES  FROM tbl_proyectos where nombre_proyecto=P_NOMBRE_PROYECTO AND id_usuario=P_ID_USUARIO;
+        IF (V_CANTIDAD_NOMBRES<=0) THEN
+            INSERT INTO `tbl_proyectos`(`id_usuario`, `nombre_proyecto`, `descripcion`, `periodo`, `interes`, `tiempo`, `gradiante`, `monto_prestamo`, `saldo_pagado`, `entrada_efectivo`, `salida_efectivo`) VALUES (P_ID_USUARIO,P_NOMBRE_PROYECTO,P_DESCRIPCION,P_PERIODO,P_INTERES,P_TIEMPO,P_GRADIANTE,P_MONTO_PRESTAMO,P_SALDO_PAGADO,
+            P_ENTRADA_EFECTIVO,P_SALIDA_EFECTIVO);
+            SELECT 'INSERTADO CON EXITO' INTO P_MENSAJE FROM DUAL;
+       ELSE
+       		SELECT 'EL NOMBRE DE PROYECTO YA EXISTE' INTO P_MENSAJE FROM DUAL;
+       END IF;
+    END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_REGISTRAR` (IN `P_NOMBRE_COMPLETO` VARCHAR(100), IN `P_PAIS` VARCHAR(11), IN `P_USUARIO` VARCHAR(50), IN `P_CORREO_ELECTRONICO` VARCHAR(150), IN `P_PASSWORD` VARCHAR(100), OUT `P_MENSAJE` VARCHAR(200))  BEGIN
     	DECLARE V_ID_PERSONA INT;
@@ -161,6 +169,15 @@ CREATE TABLE `tbl_proyectos` (
   `entrada_efectivo` float NOT NULL,
   `salida_efectivo` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_proyectos`
+--
+
+INSERT INTO `tbl_proyectos` (`id_proyecto`, `id_usuario`, `nombre_proyecto`, `descripcion`, `periodo`, `interes`, `tiempo`, `gradiante`, `monto_prestamo`, `saldo_pagado`, `entrada_efectivo`, `salida_efectivo`) VALUES
+(1, 1, 'asdf', 'asdf', 2, 2, 2, 2, 2, 2, 2, 2),
+(2, 1, 'asd', 'asd', 1, 1, 1, 1, 1, 100, 1, 1),
+(3, 1, 'A', 'AN', 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -304,7 +321,7 @@ ALTER TABLE `tbl_personas`
 -- AUTO_INCREMENT de la tabla `tbl_proyectos`
 --
 ALTER TABLE `tbl_proyectos`
-  MODIFY `id_proyecto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_proyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `tbl_resultados`
 --
@@ -332,6 +349,12 @@ ALTER TABLE `tbl_interes_compuesto`
   ADD CONSTRAINT `tbl_interes_compuesto_ibfk_1` FOREIGN KEY (`id_proyecto`) REFERENCES `tbl_proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Filtros para la tabla `tbl_interes_generado`
+--
+ALTER TABLE `tbl_interes_generado`
+  ADD CONSTRAINT `tbl_interes_generado_ibfk_1` FOREIGN KEY (`id_proyecto`) REFERENCES `tbl_proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `tbl_interes_simple`
 --
 ALTER TABLE `tbl_interes_simple`
@@ -341,8 +364,7 @@ ALTER TABLE `tbl_interes_simple`
 -- Filtros para la tabla `tbl_proyectos`
 --
 ALTER TABLE `tbl_proyectos`
-  ADD CONSTRAINT `tbl_proyectos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `tbl_proyectos_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `tbl_interes_generado` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `tbl_proyectos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tbl_resultados`
