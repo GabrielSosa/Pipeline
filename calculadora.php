@@ -140,8 +140,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" data-toggle="modal" data-target="#interesSimple">Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#interesGenerado">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#interesGenerado"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -169,8 +169,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#TasaInteres">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#TasaInteres"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -190,8 +190,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#TasaRendimiento">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#TasaRendimiento"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -211,8 +211,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#TasaNominal">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#TasaNominal"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -232,8 +232,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#AnualEfectiva">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#AnualEfectiva"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -247,14 +247,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>EFECTIVA POR PERIODO</div>
+                                                            <div>TASA DE INTERÉS ANUAL EFECTIVA</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#EfectivaPorPeriodo">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#EfectivaPorPeriodo"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -268,14 +268,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>ANUAL EFECTIVA PARA TASA NOMINAL</div>
+                                                            <div>TASA ANUAL EFECTIVA POR PERIODO DE COMPOSICIÓN</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#AE_TasaNominal">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#AE_TasaNominal"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -284,6 +284,8 @@
                                 	</div>
                                 	<!--Finaliza Row-->
 				             	</div>
+
+                                <?php include('modal/tasas.php');?>
 
 				             	<div id="flujos4" class="tab-pane">
 				             		<!--Row-->
@@ -302,8 +304,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#Efectivo">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#Efectivo"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -323,8 +325,8 @@
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#EfectivoAnio">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#EfectivoAnio"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -334,6 +336,9 @@
                                 	</div>
                                 	<!--Finaliza Row-->	
 				             	</div>
+
+                                <?php include('modal/flujos.php');?>
+
 
 				             	<div id="valores4" class="tab-pane">
 				             		<!--Row-->
@@ -346,14 +351,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES SIMPLE</div>
+                                                            <div>VALOR PRESENTE</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#valorPresente">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#valorPresente"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -367,14 +372,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES COMPUESTO</div>
+                                                            <div>VALOR FUTURO</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#valorFuturo">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#valorFuturo"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -388,14 +393,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES GENERADO</div>
+                                                            <div>VALOR PRESENTE DE SERIE UNIFORME</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#VP_Serie">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#VP_Serie"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -409,14 +414,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES GENERADO</div>
+                                                            <div>VALOR ANUAL UNIFORME</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#anual_Uniforme">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#anual_Uniforme"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -430,14 +435,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES GENERADO</div>
+                                                            <div>SERIE DE VALOR ANUAL UNIFORME</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#Serie_Anual_Uniforme">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#Serie_Anual_Uniforme"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -451,14 +456,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES GENERADO</div>
+                                                            <div>VALOR FUTURO DE SERIE UNIFORME</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#futuroUniforme">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#futuroUniforme"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -472,14 +477,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES GENERADO</div>
+                                                            <div>GRADIENTE ARITMÉTICO</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#gradiente">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#gradiente"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -493,14 +498,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES GENERADO</div>
+                                                            <div>FACTOR GRADIENTE ARITMÉTICO</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#factorGradiente">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#factorGradiente"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -514,14 +519,14 @@
                                                             <i class="fa fa-money fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>INTERES GENERADO</div>
+                                                            <div>VALOR FUTURO DURANTE UN AÑO</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a href="#">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" >Calcular</span>
-                                                        <span class="pull-right" data-toggle="modal" data-target="#interesSimple"><i class="fa fa-arrow-circle-right"></i></span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#futuroUnAnio">Calcular</span>
+                                                        <span class="pull-right" data-toggle="modal" data-target="#futuroUnAnio"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
@@ -531,6 +536,7 @@
                                 	<!--Finaliza Row-->
 				             	</div>
 
+                                <?php include('modal/valores.php');?>
 
 
 
