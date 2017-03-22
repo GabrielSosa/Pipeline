@@ -22,7 +22,7 @@
 	<title>Pipeline</title>
 </head>
 
-<body class="sticky-header">
+<body class="sticky-header left-side-collapsed">
 <section>
 	<?php echo menu(); ?>
 

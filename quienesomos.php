@@ -89,7 +89,7 @@ function resizeText() {
           <li><a href="#service">Servicios</a></li>
           <li><a href="#Características">Características</a></li>
    		  <li><a href="#Contáctanos">Contáctanos</a></li>
-        <li><a href="index.php">Volver al Inicio</a></li>
+        <li><a href="index.php">Volver a Pipeline</a></li>
         </ul>
         <ul class="">
           <li><a href="#top_content">Inicio</a></li>
@@ -98,7 +98,7 @@ function resizeText() {
           <!--<li><a href="#client_outer">Clients</a></li>-->
 					<li><a href="#Contáctanos">Contáctanos</a></li>
 					<!--<li><a href="http://app.Pharmapp.com">Login</a></li>-->
-        <li><a href="index.php">Volver al Inicio</a></li>
+        <li><a href="index.php">Volver a Pipeline</a></li>
         </ul>
       </nav>
       <a class="res-nav_click animated wobble wow"  href="javascript:void(0)"><i class="fa-bars"></i></a> </div>
@@ -138,21 +138,21 @@ function resizeText() {
           <div class="service_block">
             <div class="service_icon icon2 delay-03s animated wow  zoomIn"> <span><i class="fa-bullhorn"></i></span> </div>
             <h3 class="animated fadeInUp wow">Brinda</h3>
-            <p class="animated fadeInDown wow">sugerencias y soluciones a los usuarios a partir de los datos generales que ellos proporcionan, a pesar que la decisión final es del usuario estás sugerencias se ofrecen Cómo Pauta para la elección o acciones que se deben realizar.</p>
+            <p class="animated fadeInDown wow">Sugerencias y soluciones a los usuarios a partir de proyectos generados.</p>
           </div>
         </div>
         <div class="col-md-4 padding-bottom-spacing">
           <div class="service_block">
             <div class="service_icon  delay-03s animated wow zoomIn"> <span><i class="fa-signal"></i></span> </div>
             <h3 class="animated fadeInUp wow">Reduce tiempo </h3>
-            <p class="animated fadeInDown wow">en los cálculos de tasas presupuestos e intereses referentes al manejo de proyectos para poder optimizar la toma de decisiones o de diferentes rutas de planificación facilitando el trabajo del usuario permitiéndole realizar múltiples consultas para los fines anteriormente mencionados.</p>
+            <p class="animated fadeInDown wow">En los cálculos Financieros referentes al manejo de proyectos para poder optimizar la toma de decisiones.</p>
           </div>
         </div>
         <div class="col-md-4 padding-bottom-spacing">
           <div class="service_block">
             <div class="service_icon icon3  delay-03s animated wow zoomIn"> <span><i class="fa-compress"></i></span> </div>
             <h3 class="animated fadeInUp wow">Permite</h3>
-            <p class="animated fadeInDown wow">a los usuarios gestionar diversos números de proyectos de diferentes rubros con el fin de que el software se adapte a diferentes tipos de empresas y modelos de negocio. Logrando de esta manera, qué quién usé esta herramienta pueda aprovechar mucho de su potencial en condiciones variadas y con presupuestos amplios o reducidos según sea el caso.</p>
+            <p class="animated fadeInDown wow">A los usuarios gestionar diversos números de proyectos de diferentes y rubros.</p>
           </div>
         </div>
       </div>
@@ -172,7 +172,7 @@ function resizeText() {
             <div class="service-list-col1"> <i class="icon-doc"></i> </div>
             <div class="service-list-col2">
               <h3>Misión</h3>
-              <p>ser un software que permita una adecuada gestión de los diversos proyectos que en él se desarrollan. A su vez mantenerse como una herramienta práctica y funcional en el mercado global.</p>
+              <p>Ser un software que permita una adecuada gestión de los diversos proyectos que en él se desarrollan. A su vez mantenerse como una herramienta práctica y funcional en el mercado global.</p>
             </div>
           </div>
           <div class="service-list">
@@ -208,7 +208,7 @@ function resizeText() {
           <div class="col-sm-6 padding-bottom-spacing">
             <div class="Contáctanos_block">
               <div class="Contáctanos_block_icon icon3 rollIn animated wow"><span><i class="fa-paper-plane"></i></span></div>
-							<span> <a href="mailto:Contáctanos@Pharmapp.com"> Pipeline@gmail.com</a> </span> </div>
+							<span> <a href="facebook.com/GabrielSosa"> Pipeline@gmail.com</a> </span> </div>
           </div>
         </div>
       </div>

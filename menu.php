@@ -21,7 +21,7 @@ function scripts(){
 
 function menu(){
 	return '<!-- left side start-->'.
-		    '<div class="left-side sticky-left-side">'.
+		    '<div class="sticky-left-side left-side">'.
 
 		        '<!--logo and iconic logo start-->'.
 		        '<div class="logo">'.
