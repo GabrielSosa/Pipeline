@@ -89,6 +89,7 @@ function resizeText() {
           <li><a href="#service">Servicios</a></li>
           <li><a href="#Características">Características</a></li>
    		  <li><a href="#Contáctanos">Contáctanos</a></li>
+        <li><a href="index.php">Volver al Inicio</a></li>
         </ul>
         <ul class="">
           <li><a href="#top_content">Inicio</a></li>
