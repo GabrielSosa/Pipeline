@@ -44,7 +44,7 @@ function menu(){
 		                
 		                '<li><a href="calculadora.php"><i class="fa fa-calculator"></i> <span>Calculadora</span></a></li>'.
 
-		                '<li><a href=""><i class="fa fa-user"></i> <span>Quienes Somos</span></a></li>'.
+		                '<li><a href="quienesomos/quienesomos.php"><i class="fa fa-user"></i> <span>Quienes Somos</span></a></li>'.
 
 		                '<li><a href=""><i class="fa fa-bar-chart-o"></i> <span>Graficos</span></a></li>'.
 
