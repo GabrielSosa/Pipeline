@@ -12,7 +12,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm9" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Entrada de Efectivo</label>
                                                         <div class="col-xs-5">
@@ -63,7 +63,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm10" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Cantidad Base de Dinero</label>
                                                         <div class="col-xs-5">

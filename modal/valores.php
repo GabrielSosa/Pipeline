@@ -12,7 +12,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm11" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">valor Futuro</label>
                                                         <div class="col-xs-5">
@@ -70,7 +70,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm12" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Presente</label>
                                                         <div class="col-xs-5">
@@ -129,7 +129,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm13" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Anual Uniforme</label>
                                                         <div class="col-xs-5">
@@ -187,7 +187,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm14" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Presente Uniforme</label>
                                                         <div class="col-xs-5">
@@ -246,7 +246,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm15" class="form-horizontal">
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Futuro</label>
                                                         <div class="col-xs-5">
@@ -304,7 +304,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm16" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Anual</label>
                                                         <div class="col-xs-5">
@@ -362,7 +362,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm17" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Gradiente</label>
                                                         <div class="col-xs-5">
@@ -420,7 +420,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm18" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Gradiente</label>
                                                         <div class="col-xs-5">
@@ -478,7 +478,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm19" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Presente</label>
                                                         <div class="col-xs-5">

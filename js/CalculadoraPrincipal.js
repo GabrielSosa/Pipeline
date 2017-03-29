@@ -13,7 +13,7 @@ function Interes_cp1() {
 
 
   function TasaInteres_cp1(){
-    var interes_acumulado = document.getElementById("interes_acumulado_cp1").value;
+    var interes_acumulado = document.getElementById("interes_acumulado_cp1").value/100;
     var valor_presente1 = document.getElementById("ts_monto_cp1").value;
                         
 
@@ -34,7 +34,7 @@ function Interes_cp1() {
 function InteresSimple_cp1(){
     var valor_presente2 = document.getElementById("valor_presente2_cp1").value;
     var numero_de_periodos = document.getElementById("numero_de_periodos_cp1").value;
-    var tasa_de_interes = document.getElementById("tasa_de_interes_cp1").value;
+    var tasa_de_interes = document.getElementById("tasa_de_interes_cp1").value/100;
                         
 
     document.getElementById("interessimple_cp1").value = valor_presente2*numero_de_periodos*tasa_de_interes;
@@ -45,7 +45,7 @@ function InteresSimple_cp1(){
 function InteresCompuesto_cp1(){
     var valor_presente3 = document.getElementById("valor_presente3_cp1").value;
     var numero_de_periodos1 = document.getElementById("numero_de_periodos1_cp1").value;
-    var tasa_de_interes1 = document.getElementById("tasa_de_interes1_cp1").value;
+    var tasa_de_interes1 = document.getElementById("tasa_de_interes1_cp1").value/100;
                                         
 
     document.getElementById("interescompuesto_cp1").value =valor_presente3*Math.pow((parseFloat(tasa_de_interes1) + 1),numero_de_periodos1);
@@ -245,3 +245,32 @@ function isNumberKey(evt){
         return false;
     return true;
 }
+
+
+function Limpiar(){
+  document.getElementById("InteresForm").reset();
+  document.getElementById("InteresForm1").reset();
+  document.getElementById("InteresForm2").reset();
+  document.getElementById("InteresForm3").reset();
+  document.getElementById("InteresForm4").reset();
+  document.getElementById("InteresForm5").reset();
+  document.getElementById("InteresForm6").reset();
+  document.getElementById("InteresForm7").reset();
+  document.getElementById("InteresForm8").reset();
+  document.getElementById("InteresForm9").reset();
+  document.getElementById("InteresForm10").reset();
+  document.getElementById("InteresForm11").reset();
+  document.getElementById("InteresForm12").reset();
+  document.getElementById("InteresForm13").reset();
+  document.getElementById("InteresForm14").reset();
+  document.getElementById("InteresForm15").reset();
+  document.getElementById("InteresForm16").reset();
+  document.getElementById("InteresForm18").reset();
+  document.getElementById("InteresForm19").reset();
+  
+
+  
+
+}
+
+

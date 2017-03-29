@@ -12,7 +12,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm3" class="form-horizontal">
                                                                                                    
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto del Préstamo</label>
@@ -22,7 +22,7 @@
                                                      </div>
 
                                                      <div class="form-group">
-                                                        <label class="col-xs-3 control-label">Interés Acumulado</label>
+                                                        <label class="col-xs-3 control-label">Interés Acumulado (%)</label>
                                                         <div class="col-xs-5">
                                                             <input type="text" class="form-control" id="interes_acumulado_cp1" />
                                                         </div>
@@ -64,7 +64,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm4" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto Prestado</label>
                                                         <div class="col-xs-5">
@@ -115,10 +115,10 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm5" class="form-horizontal">
                                                                                                      
                                                      <div class="form-group">
-                                                        <label class="col-xs-3 control-label">Interés por Periodo</label>
+                                                        <label class="col-xs-3 control-label">Interés por Periodo (%)</label>
                                                         <div class="col-xs-5">
                                                             <input type="text" class="form-control" id="interes_periodos3_cp4" />
                                                         </div>
@@ -167,7 +167,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm6" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Periodo de Tiempo</label>
                                                         <div class="col-xs-5">
@@ -225,7 +225,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm7" class="form-horizontal">
                                                                                                         
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Periodos</label>
@@ -277,7 +277,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm8" class="form-horizontal">
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Periodos de Composición por Año</label>
                                                         <div class="col-xs-5">

@@ -12,7 +12,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto</label>
                                                         <div class="col-xs-5">
@@ -28,7 +28,7 @@
                                                      </div>
 
                                                      <div class="form-group">
-                                                        <label class="col-xs-3 control-label">Interes</label>
+                                                        <label class="col-xs-3 control-label">Interes (%)</label>
                                                         <div class="col-xs-5">
                                                             <input type="text" class="form-control" id="tasa_de_interes_cp1" />
                                                         </div>
@@ -45,7 +45,7 @@
                                                         <div class="form-group">
                                                             <div class="col-xs-5 col-xs-offset-3">
                                                                 <button type="submit" class="btn btn-primary" onclick="InteresSimple_cp1(); return false;">Calcular</button>
-                                                                <button type="button" class="btn btn-primary" onclick="Limpiar();" data-dismiss="modal">Cancelar</button>
+                                                                <button type="button" class="btn btn-primary" onclick="Limpiar()" data-dismiss="modal">Cancelar</button>
                                                             </div>
                                                         </div>  
                                                 </form>
@@ -70,7 +70,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm1" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto</label>
                                                         <div class="col-xs-5">
@@ -86,7 +86,7 @@
                                                      </div>
 
                                                      <div class="form-group">
-                                                        <label class="col-xs-3 control-label">Interes</label>
+                                                        <label class="col-xs-3 control-label">Interes(%)</label>
                                                         <div class="col-xs-5">
                                                             <input type="text" class="form-control" id="tasa_de_interes1_cp1" />
                                                         </div>
@@ -128,7 +128,7 @@
 
                                             <div class="modal-body">
                                                 <!-- The form is placed inside the body of modal -->
-                                                <form id="loginForm" class="form-horizontal">
+                                                <form id="InteresForm2" class="form-horizontal">
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Saldo Pagado</label>
                                                         <div class="col-xs-5">
