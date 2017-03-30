@@ -10,7 +10,7 @@
     $con= new Conexion();
    // $dbx=mysqli_connect("localhost","root","root","db_sistem_negocio");
     $dbx=$con->getConexion();
-	$consulta =consultaInteresSimple(2);
+	$consulta =consultaInteresSimple(4);
 	$registro = mysqli_query($dbx,$consulta);
 	
 	$tabla = "";

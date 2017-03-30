@@ -272,7 +272,7 @@
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
-                                                <h5 class="modal-title">TASA ANUAL EFECTIVA POR PERIODO DE COMPOSICIÓN</h5>
+                                                <h5 class="modal-title">TASA EFECTIVA POR PERIODO COMPOSICIÓN</h5>
                                             </div>
 
                                             <div class="modal-body">

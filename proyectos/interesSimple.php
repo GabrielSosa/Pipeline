@@ -40,16 +40,6 @@
         </thead>
         <tbody>
         </tbody>
-        <tfoot>
-        <tr>
-            <th>Monto Prestamo</th>
-            <th>Periodo</th>
-            <th>Interes</th>
-            <th>Monto A Pagar</th>               
-            <th>Monto Pagado</th>
-            <th>Interes Simple</th>
-        </tr>
-        </tfoot>
     </table>               
 </div>
 </body>
