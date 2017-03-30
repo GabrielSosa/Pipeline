@@ -1,9 +1,9 @@
 $(document).ready(function() {			   
-	$('#example').DataTable( {	
+	$('#interesCompuesto').DataTable( {	
 		"bDeferRender": true,			
 		"sPaginationType": "full_numbers",
 		"ajax": {
-			"url": "traerDatosTablaInteresCompuesto.php",
+			"url": "proyectos/traerDatosTablaInteresCompuesto.php",
         	"type": "POST"
 		},					
 		"columns": [

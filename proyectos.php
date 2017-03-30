@@ -53,7 +53,7 @@
                             	</a>
                             </li>
                             <li class="">
-                               <a data-toggle="tab" href="#home4">
+                               <a data-toggle="tab" href="#intersC4">
                                     <i class="fa fa-line-chart"></i>
                                     INTERES COMPUESTO
                             	</a>
@@ -87,8 +87,12 @@
                             </div>
 
                             <div id="interesS4" class="tab-pane active">
-                            	
+                            	<?php include('proyectos/interesSimple.php');?>
                             </div>
+
+                            <div id="intersC4" class="tab-pane"> 
+                              <?php include('proyectos/interesCompuesto.php');?>                                
+                            </div> 
 						</div>
 					</div>
 				</section>
@@ -104,5 +108,10 @@
 
 
 <?php echo scripts(); ?>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+</script>
 
 </html>
