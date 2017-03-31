@@ -32,14 +32,14 @@
 
         <div class="login-wrap">
             <p>Ingrese sus datos principales</p>
-            <input type="text" autofocus="" placeholder="Nombre Completo" class="form-control" name="nombrePersona">
-            <input type="text" autofocus="" placeholder="Correo Electronico" class="form-control" name="correo">
-            <input type="text" autofocus="" placeholder="Pais" class="form-control" name="pais">
+            <input type="text" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" autofocus="" placeholder="Nombre Completo" class="form-control" name="nombrePersona" required>
+            <input type="text" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="DIRECCION DE CORREO NO VALIDA" autofocus="" placeholder="Correo Electronico" class="form-control" name="correo" required>
+            <input type="text" autofocus="" placeholder="Pais" class="form-control" name="pais" required>
 
             <p> Entre datos de la cuenta</p>
-            <input type="text" autofocus="" placeholder="Nombre usuario" class="form-control" name="nombreUsuario">
-            <input type="password" placeholder="Password" class="form-control" name="password">
-            <input type="password" placeholder="Repite Password" class="form-control">
+            <input type="text" autofocus="" placeholder="Nombre usuario" class="form-control" name="nombreUsuario" required>
+            <input type="password" pattern=".{6,}" title="SEIS O MÁS CARACTERES" placeholder="Password" class="form-control" name="password" required>
+            <input type="password" pattern=".{6,}" title="SEIS O MÁS CARACTERES" placeholder="Repite Password" class="form-control" required>
             <label class="checkbox">
                 <input type="checkbox" value="agree this condition"> Acepto los terminos y politicas de condiciones
             </label>

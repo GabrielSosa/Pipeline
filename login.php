@@ -28,8 +28,8 @@
             <img src="images/login-logo.png" alt=""/>
         </div>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="Usuario" name="username" autofocus>
-            <input type="password" class="form-control" placeholder="Password" name="pass">
+            <input type="text" class="form-control" placeholder="Usuario" name="username" autofocus value="" required>
+            <input type="password" class="form-control" placeholder="Password" name="pass" value="" required>
 
             <button class="btn btn-lg btn-login btn-block" type="submit">
                 <i class="fa fa-check"></i>
