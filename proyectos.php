@@ -108,6 +108,8 @@
 
 
 <?php echo scripts(); ?>
+<script src="proyectos/readyFunctionInteresSimple.js"></script>
+<script src="proyectos/readyFunctionInteresCompuesto.js"></script>
 <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip(); 

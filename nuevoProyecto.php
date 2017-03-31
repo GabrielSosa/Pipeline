@@ -46,7 +46,11 @@
       <!-- page heading end-->
 
   <div class="wrapper">
-
+    
+          <div class="col-lg-12">
+              <h1 class="page-header">Ingrese Datos del Proyecto</h1>
+          </div>
+                <!-- /.col-lg-12 -->
       <form id="loginForm" method="post" class="form-horizontal" action="Backend/registrarProyecto.php">
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Nombre del Proyecto</label>
