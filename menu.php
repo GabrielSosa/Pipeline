@@ -12,7 +12,9 @@ session_start();
  function css(){
  	return '<link href="css/style.css" rel="stylesheet">'.
   			'<link href="css/style-responsive.css" rel="stylesheet">'.
-  			'<link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
+  			'<link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">'.
+  			'<link rel="stylesheet" href="media/css/dataTables.bootstrap.min.css">'.
+		    '<link rel="stylesheet" href="media/font-awesome/css/font-awesome.css">';
  }
 
 function scripts(){
@@ -26,7 +28,15 @@ function scripts(){
 
 			'<!--common scripts for all pages-->'.
 			'<script src="js/CalculadoraPrincipal.js"></script>'.
-			'<script src="js/scripts.js"></script>';
+			'<script src="js/scripts.js"></script>'.
+			
+			'<!--Javascript en proyectos-->'.    
+		   // '<script src="media/js/jquery-1.10.2.js"></script>'.
+		    '<script src="media/js/jquery.dataTables.min.js"></script>'.
+		    '<script src="media/js/dataTables.bootstrap.min.js"></script>'.          
+		    //'<script src="media/js/bootstrap.js"></script>'.
+		    '<script src="proyectos/readyFunctionInteresSimple.js"></script>'.
+		    '<script src="proyectos/readyFunctionInteresCompuesto.js"></script>';
 }
 
 function menu(){
