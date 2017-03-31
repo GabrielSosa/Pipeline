@@ -1,9 +1,9 @@
 
          
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-10 col-md-offset-1">
     <h1>Informacion Interes Simple</h1>  
 </div>
-<div class="col-md-8 col-md-offset-2">    
+<div class="col-md-10 col-md-offset-1">    
 <table id="interesSimple" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
         <tr>
