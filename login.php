@@ -20,17 +20,16 @@
 </head>
 
 <body class="login-body">
-
 <div class="container">
 
-    <form class="form-signin" action="index.php">
+    <form class="form-signin" action="Backend/validar.php" method="post">
         <div class="form-signin-heading text-center">
             <h1 class="sign-title">Login</h1>
             <img src="images/login-logo.png" alt=""/>
         </div>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="Usuario" autofocus>
-            <input type="password" class="form-control" placeholder="Password">
+            <input type="text" class="form-control" placeholder="Usuario" name="username" autofocus>
+            <input type="password" class="form-control" placeholder="Password" name="pass">
 
             <button class="btn btn-lg btn-login btn-block" type="submit">
                 <i class="fa fa-check"></i>

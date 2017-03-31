@@ -23,7 +23,7 @@
 
 <div class="container">
 
-    <form class="form-signin" action="index.php">
+    <form class="form-signin" action="Backend/ejecutarRegistro.php" method="post">
         <div class="form-signin-heading text-center">
             <h1 class="sign-title">Registrarse</h1>
             <img src="images/login-logo.png" alt=""/>
@@ -32,13 +32,13 @@
 
         <div class="login-wrap">
             <p>Ingrese sus datos principales</p>
-            <input type="text" autofocus="" placeholder="Nombre Complet" class="form-control">
-            <input type="text" autofocus="" placeholder="Correo Electronico" class="form-control">
-            <input type="text" autofocus="" placeholder="Pais" class="form-control">
+            <input type="text" autofocus="" placeholder="Nombre Completo" class="form-control" name="nombrePersona">
+            <input type="text" autofocus="" placeholder="Correo Electronico" class="form-control" name="correo">
+            <input type="text" autofocus="" placeholder="Pais" class="form-control" name="pais">
 
             <p> Entre datos de la cuenta</p>
-            <input type="text" autofocus="" placeholder="Nombre usuario" class="form-control">
-            <input type="password" placeholder="Password" class="form-control">
+            <input type="text" autofocus="" placeholder="Nombre usuario" class="form-control" name="nombreUsuario">
+            <input type="password" placeholder="Password" class="form-control" name="password">
             <input type="password" placeholder="Repite Password" class="form-control">
             <label class="checkbox">
                 <input type="checkbox" value="agree this condition"> Acepto los terminos y politicas de condiciones

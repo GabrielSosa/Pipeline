@@ -1,11 +1,18 @@
 <?php
+
+
+session_start();
+    if (!isset($_SESSION['usuario']) AND $_SESSION['usuario'] != 1) {
+        header("location: login.php");
+        exit;
+        }
+
+
+
  function css(){
  	return '<link href="css/style.css" rel="stylesheet">'.
   			'<link href="css/style-responsive.css" rel="stylesheet">'.
-  			'<link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">'.
-  		//	'<link rel="stylesheet" href="media/css/bootstrap.css">'.
-		    '<link rel="stylesheet" href="media/css/dataTables.bootstrap.min.css">'.
-		    '<link rel="stylesheet" href="media/font-awesome/css/font-awesome.css">';
+  			'<link href="fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css">';
  }
 
 function scripts(){
@@ -19,15 +26,7 @@ function scripts(){
 
 			'<!--common scripts for all pages-->'.
 			'<script src="js/CalculadoraPrincipal.js"></script>'.
-			'<script src="js/scripts.js"></script>'.
-
-			'<!--Javascript en proyectos-->'.    
-		   // '<script src="media/js/jquery-1.10.2.js"></script>'.
-		    '<script src="media/js/jquery.dataTables.min.js"></script>'.
-		    '<script src="media/js/dataTables.bootstrap.min.js"></script>'.          
-		    //'<script src="media/js/bootstrap.js"></script>'.
-		    '<script src="proyectos/readyFunctionInteresSimple.js"></script>'.
-		    '<script src="proyectos/readyFunctionInteresCompuesto.js"></script>';
+			'<script src="js/scripts.js"></script>';
 }
 
 function menu(){
@@ -51,7 +50,7 @@ function menu(){
 		                '<li><a href="index.php"><i class="fa fa-home"></i> <span>Inicio</span></a>'.
 		                '</li>'.
 		                
-		                '<li><a href=""><i class="fa fa-pencil-square-o"></i> <span> Nuevo Proyecto</span></a></li>'.
+		                '<li><a href="nuevoProyecto.php"><i class="fa fa-pencil-square-o"></i> <span> Nuevo Proyecto</span></a></li>'.
 		                
 		                '<li><a href="calculadora.php"><i class="fa fa-calculator"></i> <span>Calculadora</span></a></li>'.
 
@@ -63,7 +62,7 @@ function menu(){
 
 		                '<li><a href=""><i class="fa fa-file-text"></i> <span>Desiciones</span></a></li>'.
 
-		                '<li><a href="login.html"><i class="fa fa-sign-in"></i> <span>Cerrar Seccion</span></a></li>'.
+		                '<li><a href="logout.php"><i class="fa fa-sign-in"></i> <span>Cerrar Sesión</span></a></li>'.
 
 		            '</ul>'.
 		            '<!--sidebar nav end-->'.
@@ -95,13 +94,13 @@ function Encabezado(){
 	                    '<li>'.
 	                        '<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">'.
 	                            '<img src="images/photos/user-avatar.png" alt="" />'.
-	                            'Gabriel Sosa'.
+	                            $_SESSION['usuario'].
 	                            '<span class="caret"></span>'.
 	                        '</a>'.
 	                        '<ul class="dropdown-menu dropdown-menu-usermenu pull-right">'.
 	                            '<li><a href="#"><i class="fa fa-user"></i>  Perfil</a></li>'.
 	                            '<li><a href="#"><i class="fa fa-cog"></i>  Configuracion</a></li>'.
-	                            '<li><a href="#"><i class="fa fa-sign-out"></i> Desconectarse</a></li>'.
+	                            '<li><a href="logout.php"><i class="fa fa-sign-out"></i> Desconectarse</a></li>'.
 	                        '</ul>'.
 	                    '</li>'.
 
