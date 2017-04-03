@@ -8,14 +8,14 @@ $coneccion = new mysqli('localhost','root','','db_sistem_negocio');
 if($coneccion->connect_errno){ return null ;}
 
 $idproyecto="4";
-$query='select * from tbl_interes_simple  where id_proyecto ='.$idproyecto.' order by periodo';
+
 
 ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Highcharts Example</title>
+		
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<style type="text/css">
@@ -56,21 +56,18 @@ $(function () {
         xAxis: {
             categories: [
 			<?php
+				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$query="SELECT * FROM tbl_interes_simple  where id_proyecto = $idproyecto order by periodo";
+				$resultado = $conexion->query($query);
+				while($row = mysqli_fetch_assoc($resultado)){	
+			?>
+                '<?php echo "Periodo ".$row["periodo"] ?>',
+                <?php
+	            }
+	            mysqli_free_result($resultado);
+	        	mysqli_close($conexion);
 
-	
-	$resultado = $coneccion->query($query);
-	while($row = mysqli_fetch_array($resultado, MYSQLI_NUM))
-		{
-
-
-		
-?>					
-			
-			['<?php echo $row[3]; ?>',],
-<?php
-}
-
-?>
+            ?>
 			]
 			
 			
@@ -87,40 +84,48 @@ $(function () {
             }
         },
         series: [{
-            name: 'total a pagar',
+            name: 'Total a Pagar L.',
             data: [
 			
 			<?php
-		$resultado = $coneccion->query($query);
-		while($row = mysqli_fetch_array($resultado, MYSQLI_NUM))
-			{			
-?>			
-			 
-			[<?php echo $row[6] ?>],
-			
-<?php
-}
-?>
+				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$query="SELECT * FROM tbl_interes_simple  where id_proyecto = $idproyecto order by periodo";
+				$resultado = $conexion->query($query);
+				while($row = mysqli_fetch_assoc($resultado)){			
+			?>			
+					 
+					<?php echo $row["monto_pagado"] ?>,
+					
+			<?php
+			}
+			mysqli_free_result($resultado);
+	        mysqli_close($conexion);
+
+			?>
 			]
 			
 			
 			
 			
         },{
-            name: 'interes',
+            name: 'Interes L.',
             data: [
 			
 			<?php
-		$resultado = $coneccion->query($query);
-		while($row = mysqli_fetch_array($resultado, MYSQLI_NUM))
-			{			
-?>			
-			
-			[<?php echo $row[7] ?>],
-			
-<?php
-}
-?>
+				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$query="SELECT * FROM tbl_interes_simple  where id_proyecto = $idproyecto order by periodo";
+				$resultado = $conexion->query($query);
+				while($row = mysqli_fetch_assoc($resultado)){			
+			?>			
+					 
+					<?php echo $row["interes_simple"] ?>,
+					
+			<?php
+			}
+			mysqli_free_result($resultado);
+	        mysqli_close($conexion);
+
+			?>
 			]
 
         }]

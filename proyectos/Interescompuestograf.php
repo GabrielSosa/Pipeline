@@ -3,12 +3,12 @@
 			
 
 				//conexion a bd
-$coneccion = new mysqli('localhost','root','','db_sistem_negocio');
+$conexion = new mysqli('localhost','root','','db_sistem_negocio');
 
-if($coneccion->connect_errno){ return null ;}
+if($conexion->connect_errno){ return null ;}
 
 $idproyecto="4";
-$query='SELECT * FROM `tbl_interes_compuesto`  where id_proyecto ='.$idproyecto.' order by periodo';
+
 
 ?>
 <!DOCTYPE HTML>
@@ -43,7 +43,7 @@ $(function () {
             text: 'Interes Compuesto'
         },
         subtitle: {
-            text: ''
+            text: 'Variación del Interés Compuesto por Periodo'
         },
         plotOptions: {
             column: {
@@ -56,51 +56,48 @@ $(function () {
         xAxis: {
             categories: [
 			<?php
+				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$query="SELECT * FROM tbl_interes_compuesto  where id_proyecto = $idproyecto order by periodo";
+				$resultado = $conexion->query($query);
+				while($row = mysqli_fetch_assoc($resultado)){	
+			?>
+                '<?php echo "Periodo ".$row["periodo"] ?>',
+                <?php
+	            }
+	            mysqli_free_result($resultado);
+	        	mysqli_close($conexion);
 
-	
-	$resultado = $coneccion->query($query);
-	while($row = mysqli_fetch_array($resultado, MYSQLI_NUM))
-		{
-
-
-		
-?>					
-			
-			['<?php echo $row[3]; ?>',],
-<?php
-}
-
-?>
+            ?>
 			]
 			
 			
 			
         }
-		
-		
-		
-		
 		,
         yAxis: {
             title: {
-                text: ''
+                text: 'Monto Pagado'
             }
         },
         series: [{
-            name: 'interes compuesto',
+            name: 'Monto Pagado por Periodo L.',
             data: [
 			
 			<?php
-		$resultado = $coneccion->query($query);
-		while($row = mysqli_fetch_array($resultado, MYSQLI_NUM))
-			{			
-?>			
-			 
-			[<?php echo $row[7] ?>],
-			
-<?php
-}
-?>
+				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$query="SELECT * FROM tbl_interes_compuesto  where id_proyecto = $idproyecto order by periodo";
+				$resultado = $conexion->query($query);
+				while($row = mysqli_fetch_assoc($resultado)){			
+			?>			
+					 
+					<?php echo $row["monto_pagado"] ?>,
+					
+			<?php
+			}
+			mysqli_free_result($resultado);
+	        mysqli_close($conexion);
+
+			?>
 			]
 			
 			
@@ -118,8 +115,7 @@ $(function () {
 		</script>
 	</head>
 	<body>
-
-<script src="Highcharts-4.1.5/js/highcharts.js"></script>
+	<script src="Highcharts-4.1.5/js/highcharts.js"></script>
 <script src="Highcharts-4.1.5/js/highcharts-3d.js"></script>
 <script src="Highcharts-4.1.5/js/modules/exporting.js"></script>
 

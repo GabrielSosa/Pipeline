@@ -10,6 +10,10 @@
   <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
   <meta name="description" content="">
   <meta name="author" content="Clase de Industria">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <style type="text/css">
+${demo.css}
+    </style>
 
   <?php echo css(); ?>
 
@@ -23,6 +27,7 @@
 </head>
 
 <body class="sticky-header">
+
 <section>
 	<?php echo menu(); ?>
 
@@ -87,10 +92,12 @@
                             </div>
 
                             <div id="interesS4" class="tab-pane active">
+                              <?php require('proyectos/Interessimplegraf.php');?>
                             	<?php include('proyectos/interesSimple.php');?>
                             </div>
 
                             <div id="intersC4" class="tab-pane"> 
+                              <?php require('proyectos/Interescompuestograf.php');?>
                               <?php include('proyectos/interesCompuesto.php');?>                                
                             </div> 
 						</div>
@@ -110,6 +117,9 @@
 <?php echo scripts(); ?>
 <script src="proyectos/readyFunctionInteresSimple.js"></script>
 <script src="proyectos/readyFunctionInteresCompuesto.js"></script>
+<script src="Highcharts-4.1.5/js/highcharts.js"></script>
+<script src="Highcharts-4.1.5/js/highcharts-3d.js"></script>
+<script src="Highcharts-4.1.5/js/modules/exporting.js"></script>
 <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip(); 
