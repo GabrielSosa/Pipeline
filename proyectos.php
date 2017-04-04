@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
 	include('menu.php');
+  $_SESSION['id_proyecto']=$_GET['id'];
+
 ?>
 <html>
 <head>
@@ -15,7 +17,41 @@
 ${demo.css}
     </style>
 
-  <?php echo css(); ?>
+  <?php echo css(); 
+
+  include 'Backend/conexion.php';
+  require_once( 'Backend/conexion.php');
+  $conexion = new Conexion();
+  $id = $_GET['id'];
+
+  $usuario = $_SESSION['usuario'];
+
+$query_usuario="SELECT * FROM tbl_usuarios WHERE usuario='".$usuario."';";
+
+$conn = $conexion->getConexion();
+
+    // Ejecutamos la consulta
+    $resultado = mysqli_query($conexion->getConexion(), $query_usuario);
+    //  obtenermos la cantidad de registros de la consulta
+    $usuarioQ = mysqli_fetch_array($resultado, MYSQLI_NUM);
+    $idUsuario = $usuarioQ[0];
+    $array;
+  if(isset($id)) {
+  
+    $sql= mysqli_query($conexion->getConexion(), "SELECT * FROM TBL_PROYECTOS WHERE ID_PROYECTO='$id' " );
+    $array= mysqli_fetch_array( $sql);
+    if($array['id_usuario']==$idUsuario){
+    }else{  
+      echo "<script>location.href=' index.php' </script>"; // redirigir al login si es incorrecto
+      echo "<script>alert('Acceso invalido') </script>";
+      
+    }
+      
+  }else{
+    header("location: index.php");
+  }
+
+  ?>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -41,16 +77,16 @@ ${demo.css}
   <!-- page heading end-->
 
 	<div class="wrapper">
+  <div class="col-lg-12" style="margin-bottom: 30px">
+        <h2 class="page-header">Proyecto: <?php echo $array['nombre_proyecto']; ?></h1>
+        <p>Descripcion: <?php echo $array['descripcion']; ?></p>
+    </div>
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
 					<header class="panel-heading custom-tab dark-tab">
 						<ul class="nav nav-tabs">
-							<li class="">
-                               <a data-toggle="tab" href="#home4">
-                                    <i class="fa fa-home"></i>
-                            	</a>
-                            </li>
+							
                             <li class="active">
                             	<a data-toggle ="tab" href="#interesS4">
                             		<i class="fa fa-credit-card"></i>
@@ -81,6 +117,13 @@ ${demo.css}
                                     TASA DE RETORNO
                             	</a>
                             </li>
+
+                            <li class="">
+                               <a data-toggle="tab" href="#eliminar">
+                                    <i class="fa fa-home"></i>
+                                    ELIMINAR
+                              </a>
+                            </li>
 						</ul>
 					</header>
 					
@@ -89,6 +132,7 @@ ${demo.css}
                             
                             <div id="home4" class="tab-pane ">
                                 Home
+                               <?php echo $_SESSION['id_proyecto']; ?>
                             </div>
 
                             <div id="interesS4" class="tab-pane active">
@@ -97,9 +141,17 @@ ${demo.css}
                             </div>
 
                             <div id="intersC4" class="tab-pane"> 
-                              <?php require('proyectos/Interescompuestograf.php');?>
+                            <?php require('proyectos/Interescompuestograf.php');?>
                               <?php include('proyectos/interesCompuesto.php');?>                                
                             </div> 
+
+                            <div id="eliminar" class="tab-pane"> 
+                            
+                            <?php 
+                                echo '<button onclick="'."window.location.href='Backend/eliminarProyecto.php?id=".$_GET['id']."'".'" class="btn btn-primary">Eliminar</button>';
+                                ?>
+                                                           
+                            </div>
 						</div>
 					</div>
 				</section>
@@ -115,11 +167,11 @@ ${demo.css}
 
 
 <?php echo scripts(); ?>
-<script src="proyectos/readyFunctionInteresSimple.js"></script>
-<script src="proyectos/readyFunctionInteresCompuesto.js"></script>
-<script src="Highcharts-4.1.5/js/highcharts.js"></script>
-<script src="Highcharts-4.1.5/js/highcharts-3d.js"></script>
-<script src="Highcharts-4.1.5/js/modules/exporting.js"></script>
+<!-- <script src="proyectos/readyFunctionInteresSimple.js"></script> -->
+<!-- <script src="proyectos/readyFunctionInteresCompuesto.js"></script> -->
+<script src="proyectos/Highcharts-4.1.5/js/highcharts.js"></script>
+<script src="proyectos/Highcharts-4.1.5/js/highcharts-3d.js"></script>
+<script src="proyectos/Highcharts-4.1.5/js/modules/exporting.js"></script>
 <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip(); 

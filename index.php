@@ -35,7 +35,7 @@
 <section>
 <?php echo menu(); ?>
 <!-- main content start-->
-<div class="main-content" >
+<div class="main-content">
 
 	<?php echo Encabezado(); ?>
 
@@ -46,7 +46,7 @@
       <!-- page heading end-->
   
 	<div class="wrapper">
-    <div class="col-lg-12">
+    <div class="col-lg-16" >
         <h1 class="page-header">Proyectos</h1>
     </div>
 
@@ -90,13 +90,16 @@ foreach ($results as $result) {
                                                 </div>
                                                 <a href="proyectos.php?id='.$result['id_proyecto'].'">
                                                     <div class="panel-footer">
-                                                        <span class="pull-left" data-toggle="modal" data-target="#interesCompuesto" >Calcular</span>
+                                                        <span class="pull-left" data-toggle="modal" data-target="#interesCompuesto" >Ver Detalles</span>
                                                         <span class="pull-right" data-toggle="modal" data-target="#interesCompuesto"><i class="fa fa-arrow-circle-right"></i></span>
                                                         <div class="clearfix"></div>
                                                     </div>
                                                 </a>
                                             </div>
                                          </div>';
+}
+if($contador == 0){
+  echo '<p style="text-align:center" >No hay proyectos, registre un <a href="nuevoProyecto.php"> nuevo proyecto</a>.</p>';
 }
 
             ?>
@@ -110,5 +113,6 @@ foreach ($results as $result) {
 </section>
 
 <?php echo scripts(); ?>
+
 </body>
 </html>

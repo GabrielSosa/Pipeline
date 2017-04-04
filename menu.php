@@ -32,7 +32,7 @@ function scripts(){
 			
 			'<!--Javascript en proyectos-->'.    
 		   // '<script src="media/js/jquery-1.10.2.js"></script>'.
-		    '<script src="media/js/jquery.dataTables.min.js"></script>'.
+		    // '<script src="media/js/jquery.dataTables.min.js"></script>'.
 		    '<script src="media/js/dataTables.bootstrap.min.js"></script>';       
 		    //'<script src="media/js/bootstrap.js"></script>'.
 

@@ -71,17 +71,12 @@
                 </div>
             </div>
         </div>
-        <!-- modal -->
 
     </form>
 
 </div>
 
 
-
-<!-- Placed js at the end of the document so the pages load faster -->
-
-<!-- Placed js at the end of the document so the pages load faster -->
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/modernizr.min.js"></script>
