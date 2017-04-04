@@ -77,9 +77,9 @@ $conn = $conexion->getConexion();
   <!-- page heading end-->
 
 	<div class="wrapper">
-  <div class="col-lg-12" style="margin-bottom: 30px">
+  <div class="col-lg-12" style="margin-bottom: 0px">
         <h2 class="page-header">Proyecto: <?php echo $array['nombre_proyecto']; ?></h1>
-        <p>Descripcion: <?php echo $array['descripcion']; ?></p>
+        <!--<p>Descripcion: <?php //echo $array['descripcion']; ?></p>!-->
     </div>
 		<div class="row">
 			<div class="col-lg-12">

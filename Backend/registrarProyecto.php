@@ -116,6 +116,6 @@ echo $valorFuturo;
 echo "  ";
 echo $valorPresente;
 
-//header("location: ../index.php");
+header("location: ../index.php");
 ?>  
 </body>  

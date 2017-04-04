@@ -160,7 +160,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-jpy fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>TASA DE INTERES</div>
@@ -202,7 +202,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-area-chart fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>TASA DE INTERES NOMINAL</div>
@@ -223,7 +223,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-university fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>INTERES ANUAL EFECTIVA</div>
@@ -244,7 +244,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-calculator fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>TASA DE INTERÉS ANUAL EFECTIVA</div>
@@ -265,7 +265,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-credit-card fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>TASA ANUAL EFECTIVA POR PERIODO DE COMPOSICIÓN</div>
@@ -295,7 +295,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-credit-card fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>EFECTIVO</div>
@@ -316,7 +316,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-handshake-o fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>EFECTIVO EN EL AÑO</div>
@@ -348,7 +348,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-cc-visa fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>VALOR PRESENTE</div>
@@ -369,7 +369,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-eur fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>VALOR FUTURO</div>
@@ -390,7 +390,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-usd fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>VALOR PRESENTE DE SERIE UNIFORME</div>
@@ -411,7 +411,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-cc-mastercard fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>VALOR ANUAL UNIFORME</div>
@@ -432,7 +432,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-cc-discover fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>SERIE DE VALOR ANUAL UNIFORME</div>
@@ -453,7 +453,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-pie-chart fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>VALOR FUTURO DE SERIE UNIFORME</div>
@@ -474,7 +474,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-btc fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>GRADIENTE ARITMÉTICO</div>
@@ -495,7 +495,7 @@
                                                 <div class="panel-heading">
                                                     <div class="row">
                                                         <div class="col-xs-3">
-                                                            <i class="fa fa-money fa-4x"></i>
+                                                            <i class="fa fa-university fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
                                                             <div>FACTOR GRADIENTE ARITMÉTICO</div>
