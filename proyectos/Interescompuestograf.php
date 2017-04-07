@@ -1,25 +1,18 @@
 <?php
 
-			
-
-				//conexion a bd
-$conexion = new mysqli('localhost','root','','db_sistem_negocio');
-
-if($conexion->connect_errno){ return null ;}
-
 $idproyecto=$_GET['id'];
 
-
 ?>
-		<style type="text/css">
-#container2 {
+<style type="text/css">
+	#container2 {
 	height: 400px; 
 	min-width: 800px; 
 	max-width: 800px;
 	margin: 0 auto;
 }
-		</style>
-		<script type="text/javascript">
+
+</style>
+<script type="text/javascript">
 $(function () {
     $('#container2').highcharts({
         chart: {
@@ -49,16 +42,16 @@ $(function () {
         xAxis: {
             categories: [
 			<?php
-				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$conexion = new Conexion();
 				$query="SELECT * FROM tbl_interes_compuesto  where id_proyecto = $idproyecto order by periodo";
-				$resultado = $conexion->query($query);
+				$resultado= mysqli_query($conexion->getConexion(), $query);
 				while($row = mysqli_fetch_assoc($resultado)){	
 			?>
                 '<?php echo "Periodo ".$row["periodo"] ?>',
                 <?php
 	            }
 	            mysqli_free_result($resultado);
-	        	mysqli_close($conexion);
+	        	$conexion->cerrarConexion();
 
             ?>
 			]
@@ -77,9 +70,9 @@ $(function () {
             data: [
 			
 			<?php
-				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$conexion = new Conexion();
 				$query="SELECT * FROM tbl_interes_compuesto  where id_proyecto = $idproyecto order by periodo";
-				$resultado = $conexion->query($query);
+				$resultado= mysqli_query($conexion->getConexion(), $query);
 				while($row = mysqli_fetch_assoc($resultado)){			
 			?>			
 					 
@@ -88,7 +81,7 @@ $(function () {
 			<?php
 			}
 			mysqli_free_result($resultado);
-	        mysqli_close($conexion);
+	        $conexion->cerrarConexion();
 
 			?>
 			]
@@ -105,7 +98,7 @@ $(function () {
 		
     });
 });
-		</script>
+</script>
 
 
 <div id="container2" style="height: 400px"></div>

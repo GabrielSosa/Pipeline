@@ -1,11 +1,5 @@
 <?php
 
-			
-
-				//conexion a bd
-$coneccion = new mysqli('localhost','root','','db_sistem_negocio');
-
-if($coneccion->connect_errno){ return null ;}
 
 $idproyecto=$_GET['id'];
 
@@ -13,7 +7,7 @@ $idproyecto=$_GET['id'];
 
 
 		
-		<style type="text/css">
+<style type="text/css">
 #container {
 	height: 400px; 
 	min-width: 310px; 
@@ -51,17 +45,17 @@ $(function () {
         xAxis: {
             categories: [
 			<?php
-				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$conexion = new Conexion();
 				$query="SELECT * FROM tbl_interes_simple  where id_proyecto = $idproyecto order by periodo";
-				$resultado = $conexion->query($query);
+
+				$resultado= mysqli_query($conexion->getConexion(), $query);
 				while($row = mysqli_fetch_assoc($resultado)){	
 			?>
                 '<?php echo "Periodo ".$row["periodo"] ?>',
                 <?php
 	            }
 	            mysqli_free_result($resultado);
-	        	mysqli_close($conexion);
-
+	            $conexion->cerrarConexion();
             ?>
 			]
 			
@@ -83,9 +77,9 @@ $(function () {
             data: [
 			
 			<?php
-				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$conexion = new Conexion();
 				$query="SELECT * FROM tbl_interes_simple  where id_proyecto = $idproyecto order by periodo";
-				$resultado = $conexion->query($query);
+				$resultado= mysqli_query($conexion->getConexion(), $query);
 				while($row = mysqli_fetch_assoc($resultado)){			
 			?>			
 					 
@@ -94,7 +88,7 @@ $(function () {
 			<?php
 			}
 			mysqli_free_result($resultado);
-	        mysqli_close($conexion);
+	        $conexion->cerrarConexion();
 
 			?>
 			]
@@ -107,9 +101,9 @@ $(function () {
             data: [
 			
 			<?php
-				$conexion = new mysqli('localhost','root','','db_sistem_negocio');
+				$conexion = new Conexion();
 				$query="SELECT * FROM tbl_interes_simple  where id_proyecto = $idproyecto order by periodo";
-				$resultado = $conexion->query($query);
+				$resultado= mysqli_query($conexion->getConexion(), $query);
 				while($row = mysqli_fetch_assoc($resultado)){			
 			?>			
 					 
@@ -118,7 +112,7 @@ $(function () {
 			<?php
 			}
 			mysqli_free_result($resultado);
-	        mysqli_close($conexion);
+	        $conexion->cerrarConexion();
 
 			?>
 			]

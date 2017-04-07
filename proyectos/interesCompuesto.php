@@ -15,7 +15,6 @@ $idProyecto2 = $_GET['id'];
 
 $query_ic="SELECT * FROM tbl_interes_compuesto where id_proyecto=".$idProyecto2;
 
-$conn2 = $conexion2->getConexion();
 
 $results2= mysqli_query($conexion2->getConexion(), $query_ic);
 

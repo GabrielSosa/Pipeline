@@ -8,6 +8,7 @@
 
         <?php
 
+
 $conexion = new Conexion();
 
 $usuario = $_SESSION['usuario'];
@@ -19,7 +20,8 @@ $query_is="SELECT * FROM tbl_interes_simple where id_proyecto=".$idProyecto;
 $conn = $conexion->getConexion();
 
 $results= mysqli_query($conexion->getConexion(), $query_is);
-$contador = 0;
+
+
 echo '<tr>
             <th>Monto Prestamo</th>
             <th>Periodo</th>
@@ -29,7 +31,7 @@ echo '<tr>
             <th>Interes Simple</th>
         </tr>';
 foreach ($results as $result) {
-    $contador++;
+    
     echo '<tr>
             <th>'.$result['monto_prestamo'].'</th>
             <th>'.$result['periodo'].'</th>

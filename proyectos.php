@@ -100,9 +100,9 @@ $conn = $conexion->getConexion();
                             	</a>
                             </li>
                             <li class="">
-                               <a data-toggle="tab" href="#home4">
+                               <a data-toggle="tab" href="#CostoC4">
                                     <i class="fa fa-pie-chart"></i>
-                                    VALOR PRESENTE
+                                    COSTO CAPITALIZADO
                             	</a>
                             </li>
                             <li class="">
@@ -141,16 +141,18 @@ $conn = $conexion->getConexion();
                             </div>
 
                             <div id="intersC4" class="tab-pane"> 
-                            <?php require('proyectos/Interescompuestograf.php');?>
+                              <?php require('proyectos/Interescompuestograf.php');?>
                               <?php include('proyectos/interesCompuesto.php');?>                                
                             </div> 
 
+                            <div id="CostoC4" class="tab-pane"> 
+                              <?php include('proyectos/costoCapitalizado.php');?>                                
+                            </div> 
+
                             <div id="eliminar" class="tab-pane"> 
-                            
                             <?php 
                                 echo '<button onclick="'."window.location.href='Backend/eliminarProyecto.php?id=".$_GET['id']."'".'" class="btn btn-primary">Eliminar</button>';
-                                ?>
-                                                           
+                            ?>                          
                             </div>
 						</div>
 					</div>

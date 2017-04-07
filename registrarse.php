@@ -34,7 +34,7 @@
             <p>Ingrese sus datos principales</p>
             <input type="text" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" autofocus="" placeholder="Nombre Completo" class="form-control" name="nombrePersona" required>
             <input type="text" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="DIRECCION DE CORREO NO VALIDA" autofocus="" placeholder="Correo Electronico" class="form-control" name="correo" required>
-            <input type="text" autofocus="" placeholder="Pais" class="form-control" name="pais" required>
+            <input type="text" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" autofocus="" placeholder="Pais" class="form-control" name="pais" required>
 
             <p> Entre datos de la cuenta</p>
             <input type="text" autofocus="" placeholder="Nombre usuario" class="form-control" name="nombreUsuario" required>
