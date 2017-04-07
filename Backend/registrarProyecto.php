@@ -63,7 +63,7 @@ $valorPresente = $valorFuturo * (1 / pow((1 + $i),$n));
 $sqlVP="CALL `sp_valor_presente`('".$idProyecto."', '".$valorPresente."', @p1);";    
 $resultadoVP = mysqli_query($conexion->getConexion(), $sqlVP);  
 
-
+$conexion->cerrarConexion();
 header("location: ../index.php");
 ?>  
 </body>  

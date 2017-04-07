@@ -17,8 +17,6 @@ $idProyecto = $_GET['id'];
 
 $query_is="SELECT * FROM tbl_interes_simple where id_proyecto=".$idProyecto;
 
-$conn = $conexion->getConexion();
-
 $results= mysqli_query($conexion->getConexion(), $query_is);
 
 
@@ -44,6 +42,8 @@ foreach ($results as $result) {
         </tr>';
 }
 
+$conexion->cerrarConexion();
+            
             ?>
         
         </thead>

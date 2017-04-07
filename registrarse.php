@@ -23,7 +23,7 @@
 
 <div class="container">
 
-    <form class="form-signin" action="Backend/ejecutarRegistro.php" method="post">
+    <form class="form-signin" onSubmit="return validarPasswd()" action="Backend/ejecutarRegistro.php" method="post">
         <div class="form-signin-heading text-center">
             <h1 class="sign-title">Registrarse</h1>
             <img src="images/login-logo.png" alt=""/>
@@ -38,8 +38,8 @@
 
             <p> Entre datos de la cuenta</p>
             <input type="text" autofocus="" placeholder="Nombre usuario" class="form-control" name="nombreUsuario" required>
-            <input type="password" pattern=".{6,}" title="SEIS O MÁS CARACTERES" placeholder="Password" class="form-control" name="password" required>
-            <input type="password" pattern=".{6,}" title="SEIS O MÁS CARACTERES" placeholder="Repite Password" class="form-control" required>
+            <input id="passwd" type="password" pattern=".{6,}" title="SEIS O MÁS CARACTERES" placeholder="Password" class="form-control" name="password" required>
+            <input id="passwd2" type="password" pattern=".{6,}" title="SEIS O MÁS CARACTERES" placeholder="Repite Password" class="form-control" required>
             <label class="checkbox">
                 <input type="checkbox" value="agree this condition"> Acepto los terminos y politicas de condiciones
             </label>
@@ -60,10 +60,9 @@
 
 </div>
 
-
-
+<!-- Aqui Comprobaras tu password-->
+<script src="js/comprobarPassword.js"></script>
 <!-- Placed js at the end of the document so the pages load faster -->
-
 <!-- Placed js at the end of the document so the pages load faster -->
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

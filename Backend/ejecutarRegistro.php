@@ -25,6 +25,10 @@ $sql_insertar_usuario = "CALL `SP_REGISTRAR`('".$nombrePersona."', '".$pais."', 
 
 $resultado= mysqli_query($conexion->getConexion(), $sql_insertar_usuario);
 
+$conexion->cerrarConexion();
 header("location: ../login.php");
 ?>  
+<script type="text/javascript">
+	alert("Usuario Ingresado con Exito");
+</script>
 </body>  

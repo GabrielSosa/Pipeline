@@ -57,10 +57,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Forgot Password ?</h4>
+                        <h4 class="modal-title">¿Olvidaste tu contraseña ?</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Enter your e-mail address below to reset your password.</p>
+                        <p>Ingresa tu correo electronico para restablecer tu contraseña.</p>
                         <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
 
                     </div>

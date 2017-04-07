@@ -40,6 +40,8 @@ foreach ($results2 as $result2) {
         </tr>';
 }
 
+$conexion2->cerrarConexion();
+
             ?>
 
         
