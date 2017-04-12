@@ -59,11 +59,11 @@ if($CostoCapital != 0)
                             <h4>Acerca del proyecto:</h4>
                                 <div class="form-group">
                                     <label class="sr-only">Costo Inicial</label>
-                                    <input type="number"  name="costoInicialPro" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialPro">
+                                    <input type="number"  name="costoInicialPro" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialPro" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Inversion Global</label>
-                                    <input type="number" name="inversionGlobalPro" placeholder="Inversion global del proyecto" class="form-control" id="inversionGlobalPro">
+                                    <input type="number" name="inversionGlobalPro" placeholder="Inversion global del proyecto" class="form-control" id="inversionGlobalPro" required>
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-next btn btn-primary">Siguiente</button>
@@ -76,15 +76,15 @@ if($CostoCapital != 0)
                             <h4>Acerca de la Alternativa:</h4>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Costo Inicial</label>
-                                    <input type="number" name="costoInicialAlt" placeholder="costo Inicial de la Alternativa" class="form-control" id="costoInicialAlt">
+                                    <input type="number" name="costoInicialAlt" placeholder="costo Inicial de la Alternativa" class="form-control" id="costoInicialAlt" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Inversion Global</label>
-                                    <input type="number"  name="inversionGlobalAlt" placeholder="Ingresa la inversion de la Alternativa" class="form-control" id="inversionGlobalPro">
+                                    <input type="number"  name="inversionGlobalAlt" placeholder="Ingresa la inversion de la Alternativa" class="form-control" id="inversionGlobalPro" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Interes</label>
-                                    <input type="number"  name="interesAlt" placeholder="Interes de la Alternativa" class="form-control" id="interesAlt">
+                                    <input type="number"  name="interesAlt" placeholder="Interes de la Alternativa" class="form-control" id="interesAlt" required>
                                     <input type="hidden" name="idProyectoCosto" value=<?php echo $idProyectoCost;?> />
                                 </div>
                                 <div class="f1-buttons">
