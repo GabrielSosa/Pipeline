@@ -21,23 +21,22 @@ $results= mysqli_query($conexion->getConexion(), $query_is);
 
 
 echo '<tr>
-            <th>Monto Prestamo</th>
             <th>Periodo</th>
             <th>Interes</th>
-            <th>Monto A Pagar</th>               
+            <th>Pago a Capital</th>               
+            <th>Cuota</th>
+            <th>Saldo Actual</th>
             <th>Monto Pagado</th>
-            <th>Interes Simple</th>
         </tr>';
 foreach ($results as $result) {
     
     echo '<tr>
-            <th>'.$result['monto_prestamo'].'</th>
             <th>'.$result['periodo'].'</th>
             <th>'.$result['interes'].'</th>
-            <th>'.$result['monto_pagar'].'</th>               
+            <th>'.$result['pago_capital'].'</th>               
+            <th>'.$result['cuota'].'</th>
+            <th>'.$result['saldo_actual'].'</th>
             <th>'.$result['monto_pagado'].'</th>
-            <th>'.$result['interes_simple'].'</th>
-
 
         </tr>';
 }

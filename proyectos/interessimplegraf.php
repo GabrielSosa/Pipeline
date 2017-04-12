@@ -107,7 +107,7 @@ $(function () {
 				while($row = mysqli_fetch_assoc($resultado)){			
 			?>			
 					 
-					<?php echo $row["interes_simple"] ?>,
+					<?php echo $row["interes"] ?>,
 					
 			<?php
 			}

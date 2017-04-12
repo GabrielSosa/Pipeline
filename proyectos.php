@@ -12,12 +12,15 @@
   <meta name="keywords" content="admin, dashboard, bootstrap, template, flat, modern, theme, responsive, fluid, retina, backend, html5, css, css3">
   <meta name="description" content="">
   <meta name="author" content="Clase de Industria">
+  <link rel="stylesheet" href="css/EstiloModal.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <style type="text/css">
+
 ${demo.css}
     </style>
 
   <?php echo css(); 
+
 
   include 'Backend/conexion.php';
   require_once( 'Backend/conexion.php');
@@ -169,11 +172,16 @@ $conn = $conexion->getConexion();
 
 
 <?php echo scripts(); ?>
-<!-- <script src="proyectos/readyFunctionInteresSimple.js"></script> -->
-<!-- <script src="proyectos/readyFunctionInteresCompuesto.js"></script> -->
+<!-- Esta seccion es para graficoos"></script> -->
 <script src="proyectos/Highcharts-4.1.5/js/highcharts.js"></script>
 <script src="proyectos/Highcharts-4.1.5/js/highcharts-3d.js"></script>
 <script src="proyectos/Highcharts-4.1.5/js/modules/exporting.js"></script>
+
+<!--Esta seccion es para llamar modales -->
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/retina-1.1.0.min.js"></script>
+<script src="js/scriptsModal.js"></script>
+
 <script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip(); 

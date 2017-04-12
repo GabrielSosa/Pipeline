@@ -55,70 +55,49 @@
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Nombre del Proyecto</label>
                                         <div class="col-xs-5">
-                                            <input type="text" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="nombreProyecto" required/>
+                                            <input type="text" placeholder="Detalla el nombre" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="nombreProyecto" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Descripcion</label>
                                         <div class="col-xs-5">
-                                            <input type="text" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="descripcion" required/>
+                                            <input type="text" placeholder="Detalla en que consiste el proyecto" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="descripcion" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-xs-3 control-label">n (Períodos)</label>
+                                        <label class="col-xs-3 control-label">Períodos</label>
                                         <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="n" onkeypress="return isNumberKey(event)" required/>
+                                            <input type="text" placeholder="Cantidad de periodos en que trabajara" pattern = "[0-9]+" class="form-control" name="n" onkeypress="return isNumberKey(event)" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-xs-3 control-label">t (Tiempo en Meses)</label>
+                                        <label class="col-xs-3 control-label">Tiempo en Meses</label>
                                         <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="t" onkeypress="return isNumberKey(event)" required/>
+                                            <input type="text" placeholder="Cantidad de meses que trabajara" pattern = "[0-9]+" class="form-control" name="t" onkeypress="return isNumberKey(event)" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-xs-3 control-label">i (Interés)</label>
+                                        <label class="col-xs-3 control-label">Interés</label>
                                         <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="i" required/>
+                                            <input type="text" placeholder="Interes que necesitas pagar en %" pattern = "[0-9]+" class="form-control" name="i" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Monto del Préstamo</label>
                                         <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="montoPrestamo" required/>
+                                            <input type="text" placeholder="Cantidad de dinero prestado para el proyecto" pattern = "[0-9]+" class="form-control" name="montoPrestamo" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-xs-3 control-label">Saldo Pagado</label>
+                                        <label class="col-xs-3 control-label">Fecha de Inicio</label>
                                         <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="saldoPagado" required/>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Entrada de Efectivo</label>
-                                        <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="entradaEfectivo" required/>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Salida de Efectivo</label>
-                                        <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="salidaEfectivo" required/>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-xs-3 control-label">Gradiente</label>
-                                        <div class="col-xs-5">
-                                            <input type="text" pattern = "[0-9]+" class="form-control" name="gradiente" required/>
+                                            <input type="date" placeholder="Fecha en que inicias el proyecto" class="form-control" name="fechaInicio" required/>
                                         </div>
                                     </div>
 

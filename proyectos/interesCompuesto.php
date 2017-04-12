@@ -19,24 +19,24 @@ $query_ic="SELECT * FROM tbl_interes_compuesto where id_proyecto=".$idProyecto2;
 $results2= mysqli_query($conexion2->getConexion(), $query_ic);
 
 echo '<tr>
-            <th>Monto Prestamo</th>
             <th>Periodo</th>
             <th>Interes</th>
-            <th>Monto A Pagar</th>               
             <th>Monto Pagado</th>
-            <th>Interes Compuesto</th>
+            <th>Pago a Capital</th> 
+            <th>Saldo Actual</th>              
+            <th>Cuota</th>
         </tr>';
-foreach ($results2 as $result2) {
-
+foreach ($results2 as $result) {
+    
     echo '<tr>
-            <th>'.$result2['monto_prestamo'].'</th>
-            <th>'.$result2['periodo'].'</th>
-            <th>'.$result2['interes'].'</th>
-            <th>'.$result2['monto_pagar'].'</th>               
-            <th>'.$result2['monto_pagado'].'</th>
-            <th>'.$result2['interes_compuesto'].'</th>
-
-
+            <th>'.$result['periodo'].'</th>
+            <th>'.$result['interes'].'</th>
+            <th>'.$result['monto_pagado'].'</th>
+            <th>'.$result['pago_capital'].'</th>  
+            <th>'.$result['saldo_actual'].'</th>             
+            <th>'.$result['cuota'].'</th>
+            
+            
         </tr>';
 }
 

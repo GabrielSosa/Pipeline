@@ -15,14 +15,10 @@ $n = $_POST["n"];
 $t = $_POST["t"]; 
 $i = $_POST["i"];  
 $montoPrestamo = $_POST["montoPrestamo"];  
-$saldoPagado = $_POST["saldoPagado"];  
-$entradaEfectivo = $_POST["entradaEfectivo"];  
-$salidaEfectivo = $_POST["salidaEfectivo"];  
-$gradiente = $_POST["gradiente"];  
+$fechaInicio = $_POST["fechaInicio"];  
 
 // Abrimos la conexion a la base de datos  
 include 'conexion.php';
-
 require_once( 'conexion.php');
 $conexion = new Conexion();
 
@@ -43,7 +39,7 @@ $result3= mysqli_query($conexion->getConexion(), $queryMaxProyecto);
 $row= mysqli_fetch_array($result3, MYSQLI_NUM);
 $idProyecto= $row[0] + 1;
    
-$sql="CALL `SP_CREAR_PROYECTO`('".$idUsuario."', '".$nombreProyecto."', '".$descripcion."', '".$n."', '".$i."', '".$t."', '".$gradiente."', '".$montoPrestamo."', '".$saldoPagado."', '".$entradaEfectivo."', '".$salidaEfectivo."', @p1);";    
+$sql="CALL `SP_CREAR_PROYECTO`('".$idUsuario."', '".$nombreProyecto."', '".$descripcion."', '".$n."', '".$i."', '".$t."','".$montoPrestamo."', '".$fechaInicio."', @p1);";    
 $result5 = mysqli_query($conexion->getConexion(), $sql);  
 
 
