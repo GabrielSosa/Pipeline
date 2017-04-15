@@ -109,22 +109,22 @@ $conn = $conexion->getConexion();
                             	</a>
                             </li>
                             <li class="">
-                               <a data-toggle="tab" href="#home4">
+                               <a data-toggle="tab" href="#inversionP4">
                                     <i class="fa fa-area-chart"></i>
                                     INVERSION PERMANENTE
                             	</a>
                             </li>
                             <li class="">
-                               <a data-toggle="tab" href="#home4">
-                                    <i class="fa fa-home"></i>
+                               <a data-toggle="tab" href="#tasaR4">
+                                    <i class="fa fa-jpy"></i>
                                     TASA DE RETORNO
                             	</a>
                             </li>
 
                             <li class="">
-                               <a data-toggle="tab" href="#eliminar">
+                               <a data-toggle="tab" href="#comparacionVA">
                                     <i class="fa fa-home"></i>
-                                    ELIMINAR
+                                    VALOR ANUAL
                               </a>
                             </li>
 						</ul>
@@ -151,11 +151,17 @@ $conn = $conexion->getConexion();
                             <div id="CostoC4" class="tab-pane"> 
                               <?php include('proyectos/costoCapitalizado.php');?>                                
                             </div> 
+                            
+                            <div id="inversionP4" class="tab-pane"> 
+                              <!--Aqui debe incluirse el codigo de la inversion permaneteusar como ejemplo costo capitalizdo como las otras-->                             
+                            </div> 
+                            
+                             <div id="tasaR4" class="tab-pane"> 
+                              <!--Aqui debe incluirse el codigo de Tasa de retorno usar como ejemplo costo capitalizdo como las otras-->                             
+                            </div>
 
-                            <div id="eliminar" class="tab-pane"> 
-                            <?php 
-                                echo '<button onclick="'."window.location.href='Backend/eliminarProyecto.php?id=".$_GET['id']."'".'" class="btn btn-primary">Eliminar</button>';
-                            ?>                          
+                            <div id="comparacionVA" class="tab-pane"> 
+                              <!--Aqui debe incluirse el codigo de comparacion Valor Anual usar como ejemplo costo capitalizdo como las otras-->                     
                             </div>
 						</div>
 					</div>

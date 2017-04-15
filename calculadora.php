@@ -268,7 +268,7 @@
                                                             <i class="fa fa-credit-card fa-4x"></i>
                                                         </div>
                                                         <div class="col-xs-9 text-right">
-                                                            <div>TASA ANUAL EFECTIVA POR PERIODO DE COMPOSICIÓN</div>
+                                                            <div>TASA ANUAL EFECTIVA POR PERIODO</div>
                                                         </div>
                                                     </div>
                                                 </div>
