@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-04-2017 a las 16:41:27
+-- Tiempo de generación: 15-04-2017 a las 15:29:04
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -24,6 +24,29 @@ DELIMITER $$
 --
 -- Procedimientos
 --
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_comparacion_valor_anual` (IN `p_id_proyecto` INT, `p_costo_inicial_1` FLOAT, `p_costo_inicial_2` FLOAT, `p_interes_2` FLOAT, `p_interes_1` FLOAT, `p_valor_salvamiento_1` FLOAT, `p_valor_salvamiento_2` FLOAT, `p_periodo_1` FLOAT, `p_periodo_2` FLOAT, OUT `P_MENSAJE` VARCHAR(200))  BEGIN
+	DECLARE v_cantidad_tasas float DEFAULT 0;
+    DECLARE v_valor_anual_1 float DEFAULT 0;
+    DECLARE v_valor_anual_2 float DEFAULT 0;
+    DECLARE v_interes_1 float DEFAULT 0;
+    DECLARE v_interes_2 float DEFAULT 0;
+   SELECT count(*) INTO v_cantidad_tasas FROM `tbl_comparacion_valor_anual` WHERE  id_proyecto= p_id_proyecto ;
+   	
+    IF (v_cantidad_tasas<=0) THEN
+    	set v_interes_1=p_interes_1/100;
+        set v_interes_2=p_interes_2/100;
+    	set v_valor_anual_1=((-1*p_costo_inicial_1)*((v_interes_1*POW((1+v_interes_1),p_periodo_1))/ (pow((1+ v_interes_1),p_periodo_1)-1))) +
+p_valor_salvamiento_1*((v_interes_1/POW(1+v_interes_1,p_periodo_1) - 1));
+		set v_valor_anual_2=((-1*p_costo_inicial_2)*((v_interes_2*POW((1+v_interes_2),p_periodo_2))/ (pow((1+ v_interes_2),p_periodo_2)-1))) +
+p_valor_salvamiento_2*((v_interes_2/POW(1+v_interes_2,p_periodo_2) - 1));
+     INSERT INTO `tbl_comparacion_valor_anual`( `id_proyecto`, `costo_inicial_1`, `interes_1`, `valor_salvamiento_1`, `periodo_1`, `valor_anual_1`, `costo_inicial_2`, `interes_2`, `valor_salvamiento_2`, `periodo_2`, `valor_anual_2`) VALUES(p_id_proyecto, p_costo_inicial_1, v_interes_1, p_valor_salvamiento_1, p_periodo_1, v_valor_anual_1,  p_costo_inicial_2, v_interes_2,p_valor_salvamiento_2, p_periodo_2, v_valor_anual_2) ; 
+    	
+    SELECT 'COMPARACION VALOR ANUAL CALCULADO CON EXITO' INTO P_MENSAJE FROM DUAL;
+	ELSE
+       		SELECT 'ERROR:YA SE HA COMPARADO EL VALOR ANUAL ' INTO P_MENSAJE FROM DUAL;
+       END IF;
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_costo_capitalizado` (IN `p_id_proyecto` INT, IN `COSTO_INICIAL_1` FLOAT, IN `P_VALOR_ANUAL_1` FLOAT, IN `COSTO_INICIAL_2` FLOAT, IN `INTERES_2` FLOAT, IN `P_VALOR_ANUAL_2` FLOAT, OUT `P_MENSAJE` VARCHAR(200))  BEGIN
 	
     DECLARE v_cantidad_valor_anual int DEFAULT 0;
@@ -56,6 +79,20 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_CREAR_PROYECTO` (IN `P_ID_USUARI
        		SELECT 'ERROR:EL NOMBRE DE PROYECTO YA EXISTE' INTO P_MENSAJE FROM DUAL;
        END IF;
     END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_flujo_efectivo_incremental` (IN `p_id_proyecto` INT, `p_flujo_efectivo_propuesta_1` FLOAT, `p_flujo_efectivo_propuesta_2` FLOAT, OUT `P_MENSAJE` VARCHAR(200))  BEGIN
+	DECLARE v_cantidad_efectivo_incremental int DEFAULT 0;
+    DECLARE v_total float DEFAULT 0;
+    SELECT count(*) INTO v_cantidad_efectivo_incremental FROM `tbl_flujo_efectivo_incremental` WHERE  id_proyecto= p_id_proyecto;
+    set v_total=p_flujo_efectivo_propuesta_1-p_flujo_efectivo_propuesta_2;
+    IF (v_cantidad_efectivo_incremental<3) THEN
+    	INSERT INTO `tbl_flujo_efectivo_incremental`( `id_proyecto`, `flujo_propuesta_1`, `flujo_propuesta_2`,`total`) VALUES (p_id_proyecto,p_flujo_efectivo_propuesta_1,p_flujo_efectivo_propuesta_2,v_total);
+    	
+    	 SELECT 'FLUJO INCREMENTAL INGRESADO CON EXITO ' INTO P_MENSAJE FROM DUAL;
+	ELSE
+       		SELECT 'ERROR:YA SE HAN INGRESADO 3 FLUJOS INCREMENTAL ' INTO P_MENSAJE FROM DUAL;
+       END IF;
+END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_interes_compuesto` (IN `p_id_proyecto` INT, OUT `P_MENSAJE` VARCHAR(200))  BEGIN
 	
@@ -131,6 +168,18 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_interes_simple` (IN `p_id_proyec
        END IF;
 END$$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_inversion_permanente` (IN `p_id_proyecto` INT, `p_cantidad_depositada` FLOAT, `p_cantidad_retirar_indefinidamente` FLOAT, `p_cantidad_acumular` FLOAT, `p_tiempo_requerido` FLOAT, OUT `P_MENSAJE` VARCHAR(200))  BEGIN
+	DECLARE v_cantidad_inversion_permanente float DEFAULT 0;
+    
+    SELECT count(*) INTO v_cantidad_inversion_permanente FROM `tbl_resultados` WHERE  id_proyecto= p_id_proyecto  and 	cantidad_depositada_hoy IS null and cantidad_retirar_indefinida IS null  and cantidad_acumular IS null  and tiempo_requerido IS null;
+    IF (v_cantidad_inversion_permanente>0) THEN
+    	 UPDATE `tbl_resultados` SET `cantidad_depositada_hoy`=p_cantidad_depositada, `cantidad_retirar_indefinida`=p_cantidad_retirar_indefinidamente,`cantidad_acumular`=p_cantidad_acumular,`tiempo_requerido`=p_tiempo_requerido WHERE  id_proyecto=p_id_proyecto;
+    	 SELECT 'INVERSION PERMANTE INGRESADO CON EXITO ' INTO P_MENSAJE FROM DUAL;
+	ELSE
+       		SELECT 'ERROR:YA AN INGRESADO INVERSION PERMANTENTE O NO EXISTE ESTE PROYECTO ' INTO P_MENSAJE FROM DUAL;
+       END IF;
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_REGISTRAR` (IN `P_NOMBRE_COMPLETO` VARCHAR(100), IN `P_PAIS` VARCHAR(11), IN `P_USUARIO` VARCHAR(50), IN `P_CORREO_ELECTRONICO` VARCHAR(150), IN `P_PASSWORD` VARCHAR(100), OUT `P_MENSAJE` VARCHAR(200))  BEGIN
     	DECLARE V_ID_PERSONA INT;
     	DECLARE V_CANTIDAD_USUARIO INT;
@@ -203,6 +252,35 @@ CREATE TABLE `tbl_bitacoras` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tbl_comparacion_valor_anual`
+--
+
+CREATE TABLE `tbl_comparacion_valor_anual` (
+  `id_comparacion_valor_anual` int(11) NOT NULL,
+  `id_proyecto` int(11) NOT NULL,
+  `costo_inicial_1` float NOT NULL,
+  `interes_1` float NOT NULL,
+  `valor_salvamiento_1` float NOT NULL,
+  `periodo_1` float NOT NULL,
+  `valor_anual_1` float NOT NULL,
+  `costo_inicial_2` float NOT NULL,
+  `interes_2` float NOT NULL,
+  `valor_salvamiento_2` float NOT NULL,
+  `periodo_2` float NOT NULL,
+  `valor_anual_2` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_comparacion_valor_anual`
+--
+
+INSERT INTO `tbl_comparacion_valor_anual` (`id_comparacion_valor_anual`, `id_proyecto`, `costo_inicial_1`, `interes_1`, `valor_salvamiento_1`, `periodo_1`, `valor_anual_1`, `costo_inicial_2`, `interes_2`, `valor_salvamiento_2`, `periodo_2`, `valor_anual_2`) VALUES
+(8, 13, 26000, 0.15, 2000, 6, -8740.46, 36000, 0.15, 3000, 10, -10061.8),
+(9, 14, 26000, 0.15, 2000, 6, -8740.46, 36000, 0.15, 3000, 10, -10061.8);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tbl_estados`
 --
 
@@ -218,6 +296,29 @@ CREATE TABLE `tbl_estados` (
 INSERT INTO `tbl_estados` (`id_estado`, `nombre_estado`) VALUES
 (1, 'ACTIVO'),
 (2, 'INACTIVO');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_flujo_efectivo_incremental`
+--
+
+CREATE TABLE `tbl_flujo_efectivo_incremental` (
+  `id_flujo_efectivo_incremental` int(11) NOT NULL,
+  `id_proyecto` int(11) NOT NULL,
+  `flujo_propuesta_1` float NOT NULL,
+  `flujo_propuesta_2` float NOT NULL,
+  `total` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_flujo_efectivo_incremental`
+--
+
+INSERT INTO `tbl_flujo_efectivo_incremental` (`id_flujo_efectivo_incremental`, `id_proyecto`, `flujo_propuesta_1`, `flujo_propuesta_2`, `total`) VALUES
+(1, 13, 2000, 12333, -10333),
+(2, 13, 2000, 12333, -10333),
+(3, 13, 2000, 12333, -10333);
 
 -- --------------------------------------------------------
 
@@ -252,46 +353,7 @@ INSERT INTO `tbl_interes_compuesto` (`id_interes_compuesto`, `id_proyecto`, `per
 (44, 13, 9, 16.6667, 750, 83.3333, 250, 83.3333),
 (45, 13, 10, 12.5, 833.333, 83.3333, 166.667, 83.3333),
 (46, 13, 11, 8.33334, 916.667, 83.3333, 83.3334, 83.3333),
-(47, 13, 12, 4.16667, 1000, 83.3333, 0.0000457764, 83.3333),
-(48, 15, 1, 18000, 60000, 60000, 60000, 60000),
-(49, 15, 2, 9000, 120000, 60000, 0, 60000),
-(50, 16, 1, 15600, 8000, 8000, 112000, 8000),
-(51, 16, 2, 14560, 16000, 8000, 104000, 8000),
-(52, 16, 3, 13520, 24000, 8000, 96000, 8000),
-(53, 16, 4, 12480, 32000, 8000, 88000, 8000),
-(54, 16, 5, 11440, 40000, 8000, 80000, 8000),
-(55, 16, 6, 10400, 48000, 8000, 72000, 8000),
-(56, 16, 7, 9360, 56000, 8000, 64000, 8000),
-(57, 16, 8, 8320, 64000, 8000, 56000, 8000),
-(58, 16, 9, 7280, 72000, 8000, 48000, 8000),
-(59, 16, 10, 6240, 80000, 8000, 40000, 8000),
-(60, 16, 11, 5200, 88000, 8000, 32000, 8000),
-(61, 16, 12, 4160, 96000, 8000, 24000, 8000),
-(62, 16, 13, 3120, 104000, 8000, 16000, 8000),
-(63, 16, 14, 2080, 112000, 8000, 8000, 8000),
-(64, 16, 15, 1040, 120000, 8000, 0, 8000),
-(65, 17, 1, 32, 20, 20, 180, 20),
-(66, 17, 2, 28.8, 40, 20, 160, 20),
-(67, 17, 3, 25.6, 60, 20, 140, 20),
-(68, 17, 4, 22.4, 80, 20, 120, 20),
-(69, 17, 5, 19.2, 100, 20, 100, 20),
-(70, 17, 6, 16, 120, 20, 80, 20),
-(71, 17, 7, 12.8, 140, 20, 60, 20),
-(72, 17, 8, 9.6, 160, 20, 40, 20),
-(73, 17, 9, 6.4, 180, 20, 20, 20),
-(74, 17, 10, 3.2, 200, 20, 0, 20),
-(75, 18, 1, 146400, 10000, 10000, 110000, 10000),
-(76, 18, 2, 134200, 20000, 10000, 100000, 10000),
-(77, 18, 3, 122000, 30000, 10000, 90000, 10000),
-(78, 18, 4, 109800, 40000, 10000, 80000, 10000),
-(79, 18, 5, 97600, 50000, 10000, 70000, 10000),
-(80, 18, 6, 85400, 60000, 10000, 60000, 10000),
-(81, 18, 7, 73200, 70000, 10000, 50000, 10000),
-(82, 18, 8, 61000, 80000, 10000, 40000, 10000),
-(83, 18, 9, 48800, 90000, 10000, 30000, 10000),
-(84, 18, 10, 36600, 100000, 10000, 20000, 10000),
-(85, 18, 11, 24400, 110000, 10000, 10000, 10000),
-(86, 18, 12, 12200, 120000, 10000, 0, 10000);
+(47, 13, 12, 4.16667, 1000, 83.3333, 0.0000457764, 83.3333);
 
 -- --------------------------------------------------------
 
@@ -351,46 +413,7 @@ INSERT INTO `tbl_interes_simple` (`id_interes_simple`, `id_proyecto`, `periodo`,
 (64, 14, 9, 1000, 600, 1600, 4800, 14400),
 (65, 14, 10, 1000, 600, 1600, 3200, 16000),
 (66, 14, 11, 1000, 600, 1600, 1600, 17600),
-(67, 14, 12, 1000, 600, 1600, 0, 19200),
-(68, 15, 1, 60000, 18000, 78000, 78000, 78000),
-(69, 15, 2, 60000, 18000, 78000, 0, 156000),
-(70, 16, 1, 8000, 15600, 23600, 330400, 23600),
-(71, 16, 2, 8000, 15600, 23600, 306800, 47200),
-(72, 16, 3, 8000, 15600, 23600, 283200, 70800),
-(73, 16, 4, 8000, 15600, 23600, 259600, 94400),
-(74, 16, 5, 8000, 15600, 23600, 236000, 118000),
-(75, 16, 6, 8000, 15600, 23600, 212400, 141600),
-(76, 16, 7, 8000, 15600, 23600, 188800, 165200),
-(77, 16, 8, 8000, 15600, 23600, 165200, 188800),
-(78, 16, 9, 8000, 15600, 23600, 141600, 212400),
-(79, 16, 10, 8000, 15600, 23600, 118000, 236000),
-(80, 16, 11, 8000, 15600, 23600, 94400, 259600),
-(81, 16, 12, 8000, 15600, 23600, 70800, 283200),
-(82, 16, 13, 8000, 15600, 23600, 47200, 306800),
-(83, 16, 14, 8000, 15600, 23600, 23600, 330400),
-(84, 16, 15, 8000, 15600, 23600, 0, 354000),
-(85, 17, 1, 20, 32, 52, 468, 52),
-(86, 17, 2, 20, 32, 52, 416, 104),
-(87, 17, 3, 20, 32, 52, 364, 156),
-(88, 17, 4, 20, 32, 52, 312, 208),
-(89, 17, 5, 20, 32, 52, 260, 260),
-(90, 17, 6, 20, 32, 52, 208, 312),
-(91, 17, 7, 20, 32, 52, 156, 364),
-(92, 17, 8, 20, 32, 52, 104, 416),
-(93, 17, 9, 20, 32, 52, 52, 468),
-(94, 17, 10, 20, 32, 52, 0, 520),
-(95, 18, 1, 10000, 146400, 156400, 1720400, 156400),
-(96, 18, 2, 10000, 146400, 156400, 1564000, 312800),
-(97, 18, 3, 10000, 146400, 156400, 1407600, 469200),
-(98, 18, 4, 10000, 146400, 156400, 1251200, 625600),
-(99, 18, 5, 10000, 146400, 156400, 1094800, 782000),
-(100, 18, 6, 10000, 146400, 156400, 938400, 938400),
-(101, 18, 7, 10000, 146400, 156400, 782000, 1094800),
-(102, 18, 8, 10000, 146400, 156400, 625600, 1251200),
-(103, 18, 9, 10000, 146400, 156400, 469200, 1407600),
-(104, 18, 10, 10000, 146400, 156400, 312800, 1564000),
-(105, 18, 11, 10000, 146400, 156400, 156400, 1720400),
-(106, 18, 12, 10000, 146400, 156400, 0, 1876800);
+(67, 14, 12, 1000, 600, 1600, 0, 19200);
 
 -- --------------------------------------------------------
 
@@ -453,11 +476,7 @@ INSERT INTO `tbl_proyectos` (`id_proyecto`, `id_usuario`, `nombre_proyecto`, `de
 (11, 1, 'asdDSA', 'asddsa', 12, 12, 12, 223333, '2017-04-16', NULL),
 (12, 1, 'aasd', 'dsa', 12, 12, 12, 12333, '2017-04-27', NULL),
 (13, 1, 'prestamo simple', 'asdsd', 12, 5, 3, 1000, '2017-04-16', NULL),
-(14, 1, 'hhhweqa', 'dsad', 12, 5, 3, 12000, '2017-04-16', 1),
-(15, 2, 'Gabriel', 'este no se', 2, 15, 13, 120000, '2017-04-11', 1),
-(16, 2, 'HOLA', 'NOSE', 15, 13, 12, 120000, '2013-03-01', 1),
-(17, 2, 'GAbo', 'asdas', 10, 16, 15, 200, '2017-02-03', 1),
-(18, 2, 'dania', 'asda', 12, 122, 12, 120000, '1993-01-12', 1);
+(14, 1, 'hhhweqa', 'dsad', 12, 5, 3, 12000, '2017-04-16', 1);
 
 -- --------------------------------------------------------
 
@@ -488,16 +507,12 @@ CREATE TABLE `tbl_resultados` (
 --
 
 INSERT INTO `tbl_resultados` (`id_resultado`, `id_proyecto`, `valor_presente`, `valor_futuro`, `costo_inicial_1`, `valor_anual_1`, `tasa_interes_2`, `costo_inicial_2`, `valor_anual_2`, `costo_capitalizado_1`, `costo_capitalizado_2`, `cantidad_depositada_hoy`, `cantidad_retirar_indefinida`, `cantidad_acumular`, `tiempo_requerido`) VALUES
-(1, 4, 20.2, 20.2, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL),
+(1, 4, 20.2, 20.2, 1000, 120, 1000, 12500, 130, 3400, 12513, NULL, NULL, NULL, NULL),
 (3, 5, NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 9, NULL, 20.2, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL),
 (5, 12, NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, 13, NULL, NULL, 800000, 25000, 15, 800000, 25000, 1300000, 966667, NULL, NULL, NULL, NULL),
-(7, 14, NULL, NULL, 2000, 2000, 15, 3800, 2100, 42000, 17800, NULL, NULL, NULL, NULL),
-(8, 15, 120000, 30720000, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(9, 16, 120000, 1.86682e22, 1200, 1500, 400, 600, 300, 12738.5, 675, NULL, NULL, NULL, NULL),
-(10, 17, 200, 403199000000000, 1500, 1500, 1700, 1700, 1700, 10875, 1800, NULL, NULL, NULL, NULL),
-(11, 18, 120000, 1.43894e30, 1500, 1500, 1560, 1200, 1522, 2729.51, 1297.56, NULL, NULL, NULL, NULL);
+(6, 13, NULL, NULL, 800000, 25000, 15, 800000, 25000, 1300000, 966667, 2000, 12333, 1000, 1000),
+(7, 14, NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -565,10 +580,24 @@ ALTER TABLE `tbl_bitacoras`
   ADD KEY `fk_persona_bitacora` (`id_usuario`);
 
 --
+-- Indices de la tabla `tbl_comparacion_valor_anual`
+--
+ALTER TABLE `tbl_comparacion_valor_anual`
+  ADD PRIMARY KEY (`id_comparacion_valor_anual`),
+  ADD KEY `fk_comparacion_proyectos` (`id_proyecto`);
+
+--
 -- Indices de la tabla `tbl_estados`
 --
 ALTER TABLE `tbl_estados`
   ADD PRIMARY KEY (`id_estado`);
+
+--
+-- Indices de la tabla `tbl_flujo_efectivo_incremental`
+--
+ALTER TABLE `tbl_flujo_efectivo_incremental`
+  ADD PRIMARY KEY (`id_flujo_efectivo_incremental`),
+  ADD KEY `fk_flujo_incremental_proyecto` (`id_proyecto`);
 
 --
 -- Indices de la tabla `tbl_interes_compuesto`
@@ -639,15 +668,25 @@ ALTER TABLE `tbl_usuarios`
 ALTER TABLE `tbl_bitacoras`
   MODIFY `id_bitacora` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT de la tabla `tbl_comparacion_valor_anual`
+--
+ALTER TABLE `tbl_comparacion_valor_anual`
+  MODIFY `id_comparacion_valor_anual` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
 -- AUTO_INCREMENT de la tabla `tbl_estados`
 --
 ALTER TABLE `tbl_estados`
   MODIFY `id_estado` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT de la tabla `tbl_flujo_efectivo_incremental`
+--
+ALTER TABLE `tbl_flujo_efectivo_incremental`
+  MODIFY `id_flujo_efectivo_incremental` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT de la tabla `tbl_interes_compuesto`
 --
 ALTER TABLE `tbl_interes_compuesto`
-  MODIFY `id_interes_compuesto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id_interes_compuesto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT de la tabla `tbl_interes_generado`
 --
@@ -657,7 +696,7 @@ ALTER TABLE `tbl_interes_generado`
 -- AUTO_INCREMENT de la tabla `tbl_interes_simple`
 --
 ALTER TABLE `tbl_interes_simple`
-  MODIFY `id_interes_simple` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id_interes_simple` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 --
 -- AUTO_INCREMENT de la tabla `tbl_personas`
 --
@@ -667,12 +706,12 @@ ALTER TABLE `tbl_personas`
 -- AUTO_INCREMENT de la tabla `tbl_proyectos`
 --
 ALTER TABLE `tbl_proyectos`
-  MODIFY `id_proyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_proyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `tbl_resultados`
 --
 ALTER TABLE `tbl_resultados`
-  MODIFY `id_resultado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_resultado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `tbl_tasa_retorno`
 --
@@ -692,6 +731,12 @@ ALTER TABLE `tbl_usuarios`
 --
 ALTER TABLE `tbl_bitacoras`
   ADD CONSTRAINT `tbl_bitacoras_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `tbl_flujo_efectivo_incremental`
+--
+ALTER TABLE `tbl_flujo_efectivo_incremental`
+  ADD CONSTRAINT `tbl_flujo_efectivo_incremental_ibfk_1` FOREIGN KEY (`id_proyecto`) REFERENCES `tbl_proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tbl_interes_compuesto`
