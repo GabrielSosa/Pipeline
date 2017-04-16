@@ -139,7 +139,7 @@ $conn = $conexion->getConexion();
                             </div>
 
                             <div id="interesS4" class="tab-pane active">
-                              <?php require('proyectos/Interessimplegraf.php');?>
+                              <?php require('proyectos/interessimplegraf.php');?>
                             	<?php include('proyectos/interesSimple.php');?>
                             </div>
 
