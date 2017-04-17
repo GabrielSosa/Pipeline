@@ -4,10 +4,18 @@
 $idproyecto=$_GET['id'];
 
 $conexion = new Conexion();
-$querycostograf="SELECT valor_anual_1, valor_anual_2 FROM tbl_comparacion_valor_anual  where id_proyecto = $idproyecto";
+$querycostograf="SELECT * FROM tbl_comparacion_valor_anual  where id_proyecto = $idproyecto";
 $resultadograf = mysqli_query($conexion->getConexion(), $querycostograf);
 
 foreach ($resultadograf as $resultgraf) {
+     $costo_inicial_1 = $resultgraf['costo_inicial_1'];
+     $costo_inicial_2 = $resultgraf['costo_inicial_2'];
+     $interes_1 = $resultgraf['interes_1'];
+     $interes_2 = $resultgraf['interes_2'];
+     $periodo_1 = $resultgraf['periodo_1'];
+     $periodo_2 = $resultgraf['periodo_2'];
+     $valor_salvamiento_1 = $resultgraf['valor_salvamiento_1'];
+     $valor_salvamiento_2 = $resultgraf['valor_salvamiento_2'];
      $valor_anual_1 = $resultgraf['valor_anual_1'];
      $valor_anual_2 = $resultgraf['valor_anual_2'];
 }
@@ -20,9 +28,10 @@ if($valor_anual_2 < 0){
 $respuesta =$valor_anual_1+$valor_anual_2;
 $respuesta1 = ($valor_anual_1/$respuesta)*100;
 $respuesta2 = ($valor_anual_2/$respuesta)*100;
-echo $respuesta1;
 ?>
         
+
+
 
 <style type="text/css">
     #valorAnual {
@@ -75,6 +84,40 @@ $(function () {
 		</script>
 
 <div id="valorAnual"></div>
+
+
+<table class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <tr>
+        <td></td>
+        <td>Propuesta I</td>
+        <td>Propuesta II</td>
+    </tr>
+    <tr>
+        <td>Costo Inicial</td>
+        <td><?php  echo $costo_inicial_1; ?></td>
+        <td><?php  echo $costo_inicial_2; ?></td>
+    </tr>
+    <tr>
+        <td>Interés</td>
+        <td><?php  echo $interes_1; ?></td>
+        <td><?php  echo $interes_2; ?></td>
+    </tr>
+    <tr>
+        <td>Valor de Salvamento</td>
+        <td><?php  echo $valor_salvamiento_1; ?></td>
+        <td><?php  echo $valor_salvamiento_2; ?></td>
+    </tr>
+    <tr>
+        <td>Vida, Años</td>
+        <td><?php  echo $periodo_1; ?></td>
+        <td><?php  echo $periodo_2; ?></td>
+    </tr>
+    <tr>
+        <td>Valor Anual</td>
+        <td><?php  echo $valor_anual_1; ?></td>
+        <td><?php  echo $valor_anual_2; ?></td>
+    </tr>
+</table>
 
 	</body>
 </html>
