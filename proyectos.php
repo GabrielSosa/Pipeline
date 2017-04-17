@@ -149,7 +149,7 @@ $conn = $conexion->getConexion();
                             </div> 
 
                             <div id="CostoC4" class="tab-pane"> 
-                              <?php include('proyectos/costoCapitalizado.php');?>                                
+                              <?php include('proyectos/costoCapitalizado.php');?>                              
                             </div> 
                             
                             <div id="inversionP4" class="tab-pane"> 
@@ -161,6 +161,7 @@ $conn = $conexion->getConexion();
                             </div>
 
                             <div id="comparacionVA" class="tab-pane"> 
+                            <?php include('proyectos/valorAnual.php');?>
                               <!--Aqui debe incluirse el codigo de comparacion Valor Anual usar como ejemplo costo capitalizdo como las otras-->                     
                             </div>
 						</div>
