@@ -19,6 +19,6 @@ $resultCosto= mysqli_query($conexionCosto->getConexion(), $queryCosto);
 
 $conexionCosto->cerrarConexion();
  
-header("location: ../proyectos.php?ref=<?php echo $idProyectoCosto; ?>");
+header("location: ../proyectos.php?id=".$idProyectoCosto);
 
 ?>
