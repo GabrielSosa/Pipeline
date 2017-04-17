@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -85,6 +86,11 @@ $(function () {
 
 <div id="valorAnual"></div>
 
+<div class="col-md-10 col-md-offset-1">
+    <h1>Valor Anual</h1>  
+
+</div>
+<div class="col-md-10 col-md-offset-1">
 
 <table class="table table-striped table-bordered" cellspacing="0" width="100%">
     <tr>
@@ -118,6 +124,7 @@ $(function () {
         <td><?php  echo $valor_anual_2; ?></td>
     </tr>
 </table>
-
+</div>
 	</body>
 </html>
+
