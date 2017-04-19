@@ -33,76 +33,33 @@ foreach ($resultadoTasaGraf as $resultgraf) {
         $interesSobreSaldoNoRecuperadoAtl = $resultgraf['interes_sobre_saldo_no_recuperado'];
         
     }
+
+    if($contador==3)
+    {
+        $flujoProAtl1 = $resultgraf['flujo_efectivo']; 
+        $interesProAtl1 = $resultgraf['interes'];   
+        $saldoProAtl1 = $resultgraf['saldo_inicial_no_recuperado']; 
+        $anioAtl1 = $resultgraf['anio'];
+        $cantidadRecuperadaAtl1 = $resultgraf['cantidad_recuperada'];
+        $saldoFinalNoRecuperadoAtl1 = $resultgraf['saldo_inicial_no_recuperado'];
+        $interesSobreSaldoNoRecuperadoAtl1 = $resultgraf['interes_sobre_saldo_no_recuperado'];
+        
+    }
+
+
+
        
     $contador++;
 
 
 }
-if($cantidadRecuperada < 0){
-    $cantidadRecuperada = -1*$cantidadRecuperada;
-}
-if($cantidadRecuperadaAtl < 0){
-    $cantidadRecuperadaAtl = -1*$cantidadRecuperadaAtl;
-}
-$respuesta =$cantidadRecuperada+$cantidadRecuperadaAtl;
-$respuesta1 = ($cantidadRecuperada/$respuesta)*100;
-$respuesta2 = ($cantidadRecuperadaAtl/$respuesta)*100;
+
 ?>
         
 
 
 
-<style type="text/css">
-    #valorTasaRetorno {
-    height: 400px; 
-    min-width: 800px; 
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-</style>
-<script type="text/javascript">
-$(function () {
-
-    $(document).ready(function () {
-
-        $('#valorTasaRetorno').highcharts({
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false
-            },
-            title: {
-                text: 'Tasa De Retorno con Propuesta II'
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: false
-                    },
-                    showInLegend: true
-                }
-            },
-            series: [{
-                type: 'pie',
-                name: 'factibilidad',
-                data: [
-                    ['Proyecto',   <?php echo number_format($respuesta1, 2, '.', '');?>],
-                    ['Alternativa II', <?php echo number_format($respuesta2, 2, '.', '');?>]
-                ]
-            }]
-        });
-    });
-
-});
-		</script>
-
-<div id="valorTasaRetorno"></div>
 
 <div class="col-md-10 col-md-offset-1">
     <h1>Tasa De Retorno</h1>  
@@ -111,46 +68,58 @@ $(function () {
 <div class="col-md-10 col-md-offset-1">
 
 <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
     <tr>
-        <td></td>
-        <td>Propuesta I</td>
-        <td>Propuesta II</td>
+        <th>Variables</th>
+        <th>Periodo I</th>
+        <th>Periodo II</th>
+        <th>Periodo II</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
         <td>Flujo De Efectivo</td>
         <td><?php  echo $flujoPro; ?></td>
         <td><?php  echo $flujoProAtl; ?></td>
+        <td><?php  echo $flujoProAtl1; ?></td>
     </tr>
     <tr>
         <td>Interés</td>
         <td><?php  echo  $interesPro; ?></td>
         <td><?php  echo  $interesProAtl; ?></td>
+        <td><?php  echo  $interesProAtl1; ?></td>
     </tr>
     <tr>
         <td>año</td>
         <td><?php  echo $anio; ?></td>
         <td><?php  echo $anioAtl; ?></td>
+        <td><?php  echo $anioAtl1; ?></td>
     </tr>
     <tr>
         <td>Cantidad Recuperada</td>
         <td><?php  echo $cantidadRecuperada; ?></td>
         <td><?php  echo $cantidadRecuperadaAtl; ?></td>
+        <td><?php  echo $cantidadRecuperadaAtl1; ?></td>
     </tr>
     <tr>
         <td>Saldo Inicial No Recuperado</td>
         <td><?php  echo  $saldoPro; ?></td>
         <td><?php  echo  $saldoProAtl; ?></td>
+         <td><?php  echo  $saldoProAtl1; ?></td>
     </tr>
      <tr>
         <td>Saldo Final No Recuperado</td>
         <td><?php  echo $saldoFinalNoRecuperado; ?></td>
         <td><?php  echo $saldoFinalNoRecuperadoAtl; ?></td>
+        <td><?php  echo $saldoFinalNoRecuperadoAtl1; ?></td>
     </tr>
      <tr>
         <td>Interes Sobre Saldo No Recuperado</td>
         <td><?php  echo $interesSobreSaldoNoRecuperado; ?></td>
         <td><?php  echo $interesSobreSaldoNoRecuperadoAtl; ?></td>
+        <td><?php  echo $interesSobreSaldoNoRecuperadoAtl1; ?></td>
     </tr>
+    </tbody>
 </table>
 </div>
 	</body>
