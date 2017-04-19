@@ -157,6 +157,7 @@ $conn = $conexion->getConexion();
                             </div> 
                             
                              <div id="tasaR4" class="tab-pane"> 
+                               <?php include('proyectos/tasaDeRetorno.php');?>
                               <!--Aqui debe incluirse el codigo de Tasa de retorno usar como ejemplo costo capitalizdo como las otras-->                             
                             </div>
 
