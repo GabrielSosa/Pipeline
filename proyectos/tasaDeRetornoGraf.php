@@ -62,7 +62,8 @@ foreach ($resultadoTasaGraf as $resultgraf) {
 
 
 <div class="col-md-10 col-md-offset-1">
-    <h1>Tasa De Retorno</h1>  
+    <h1>Tasa De Retorno</h1> 
+    <p>Rentabilidad de los cobros y los pagos actualizados generados por una inversión.</p> 
 
 </div>
 <div class="col-md-10 col-md-offset-1">
