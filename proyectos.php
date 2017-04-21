@@ -139,16 +139,33 @@ $conn = $conexion->getConexion();
                             </div>
 
                             <div id="interesS4" class="tab-pane active">
+
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                              <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span>
+                              </button>
+                            </form>
+                                                     
                               <?php require('proyectos/interessimplegraf.php');?>
                             	<?php include('proyectos/interesSimple.php');?>
                             </div>
 
-                            <div id="intersC4" class="tab-pane"> 
+                            <div id="intersC4" class="tab-pane">
+
+                            <button style="float:left" type="button" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span> 
+                            </button>
+
                               <?php require('proyectos/Interescompuestograf.php');?>
                               <?php include('proyectos/interesCompuesto.php');?>                                
                             </div> 
 
                             <div id="CostoC4" class="tab-pane"> 
+                            <button style="float:left" type="button" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span> 
+                              </button>
+
                               <?php include('proyectos/costoCapitalizado.php');?>                              
                             </div> 
                             
@@ -157,11 +174,20 @@ $conn = $conexion->getConexion();
                             </div> 
                             
                              <div id="tasaR4" class="tab-pane"> 
+
+                             <button style="float:left" type="button" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span> 
+                              </button>
+
                                <?php include('proyectos/tasaDeRetorno.php');?>
                               <!--Aqui debe incluirse el codigo de Tasa de retorno usar como ejemplo costo capitalizdo como las otras-->                             
                             </div>
 
                             <div id="comparacionVA" class="tab-pane"> 
+                            <button style="float:left" type="button" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span> 
+                              </button>
+
                             <?php include('proyectos/valorAnual.php');?>
                               <!--Aqui debe incluirse el codigo de comparacion Valor Anual usar como ejemplo costo capitalizdo como las otras-->                     
                             </div>

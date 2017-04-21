@@ -1,0 +1,190 @@
+
+
+#fotos2{
+  background-color: white;
+  width: 400px;
+  height: 512px;
+
+  animation-name: slidein;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  animation-play-state: running;
+
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+
+#fotos2 : hover{
+
+  animation-play-state: paused;
+
+}
+
+@keyframes slidein{
+
+   from{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.001.png);
+
+   }
+
+    4%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.002.png);
+
+   }
+    8%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.003.png);
+
+   }
+   12%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.004.png);
+
+   }
+   16%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.005.png);
+
+   }
+   20%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.006.png);
+
+   }
+   24%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.007.png);
+
+   }
+   28%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.008.png);
+
+   }
+   32%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.009.png);
+
+   }
+   36%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.010.png);
+
+   }
+   40%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.011.png);
+
+   }
+   44%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.012.png);
+
+   }
+   48%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.013.png);
+
+   }
+   52%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.014.png);
+
+   }
+   56%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.015.png);
+
+   }
+   60%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.016.png);
+
+   }   
+   64%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.017.png);
+
+   }
+   68%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.018.png);
+
+   }
+   72%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.019.png);
+
+   }
+   76%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.020.png);
+
+   }
+   80%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.021.png);
+
+   }
+   84%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.022.png);
+
+   }
+   88%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.023.png);
+
+   }
+   92%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.024.png);
+
+   }
+   96%{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.024.png);
+
+   }
+   to{
+      width: 460px;
+      height: 512px;
+      background: url(../image/des/Image.024.png);
+      animation-play-state: paused;
+
+   }
+
+   
+
+
+
+}
+
