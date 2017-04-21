@@ -153,6 +153,7 @@ $conn = $conexion->getConexion();
                             </div> 
                             
                             <div id="inversionP4" class="tab-pane"> 
+				    <?php include('proyectos/inversionPermanente.php');?> 
                               <!--Aqui debe incluirse el codigo de la inversion permaneteusar como ejemplo costo capitalizdo como las otras-->                             
                             </div> 
                             
