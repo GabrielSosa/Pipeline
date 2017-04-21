@@ -47,9 +47,10 @@
 
   
 <?php
-include('animacion/page.php')
 // echo '<dir id="fotos"></dir>';
-/*$idProyecto = $_GET[idProyecto];
+$idProyecto = $_GET[idProyecto];
+if (isset($idProyecto)){ 
+
 include 'Backend/conexion.php';
 require_once( 'Backend/conexion.php');
 $conexionDesicion = new Conexion();
@@ -61,14 +62,24 @@ foreach ($results as $resultado) {
     $ValorAnual= $resultado['valor_presente'];
 }
 
-if($ValorAnual<0){
-  echo '<dir id="fotos"></dir>';
+if($ValorAnual>0){
+  echo'<link rel="stylesheet" type="text/css" href="animacion/cssani/animation.css">';
+  echo'<dir id="fotos"></dir>';
 }else{
-  echo '<dir id="fotos2"></dir>';
+  echo'<link rel="stylesheet" type="text/css" href="animacion/cssani/animation2.css">';
+  echo'<dir id="fotos2"></dir>';
 }
 
-$conexionDesicion->cerrarConexion();*/
+$conexionDesicion->cerrarConexion();
+
+}else{
+ header("location:/pipeline/index.php"); 
+  
+}
+//header("location:/pipeline/index.php"); 
+
 ?>
+
 
 </div>	
 

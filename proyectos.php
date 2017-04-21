@@ -153,42 +153,59 @@ $conn = $conexion->getConexion();
 
                             <div id="intersC4" class="tab-pane">
 
-                            <button style="float:left" type="button" class="btn btn-default btn-sm">
-                                  <span class="fa fa-file-text"></span> 
-                            </button>
+                           <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                              <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span>
+                              </button>
+                            </form>
 
                               <?php require('proyectos/Interescompuestograf.php');?>
                               <?php include('proyectos/interesCompuesto.php');?>                                
                             </div> 
 
                             <div id="CostoC4" class="tab-pane"> 
-                            <button style="float:left" type="button" class="btn btn-default btn-sm">
-                                  <span class="fa fa-file-text"></span> 
+
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                              <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span>
                               </button>
+                            </form>
 
                               <?php include('proyectos/costoCapitalizado.php');?>                              
                             </div> 
                             
                             <div id="inversionP4" class="tab-pane"> 
-				    <?php include('proyectos/inversionPermanente.php');?> 
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                              <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span>
+                              </button>
+                            </form>
+				                      <?php include('proyectos/inversionPermanente.php');?> 
                               <!--Aqui debe incluirse el codigo de la inversion permaneteusar como ejemplo costo capitalizdo como las otras-->                             
                             </div> 
                             
                              <div id="tasaR4" class="tab-pane"> 
 
-                             <button style="float:left" type="button" class="btn btn-default btn-sm">
-                                  <span class="fa fa-file-text"></span> 
+                             <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                              <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span>
                               </button>
-
+                            </form>
                                <?php include('proyectos/tasaDeRetorno.php');?>
                               <!--Aqui debe incluirse el codigo de Tasa de retorno usar como ejemplo costo capitalizdo como las otras-->                             
                             </div>
 
                             <div id="comparacionVA" class="tab-pane"> 
-                            <button style="float:left" type="button" class="btn btn-default btn-sm">
-                                  <span class="fa fa-file-text"></span> 
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                              <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                                  <span class="fa fa-file-text"></span>
                               </button>
-
+                            </form>
                             <?php include('proyectos/valorAnual.php');?>
                               <!--Aqui debe incluirse el codigo de comparacion Valor Anual usar como ejemplo costo capitalizdo como las otras-->                     
                             </div>
