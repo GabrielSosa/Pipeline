@@ -5,7 +5,7 @@ class Conexion
 
 		function __construct()
 		{
-			$this->conect = new mysqli("localhost", "root", "", "db_sistem_negocio");
+			$this->conect = new mysqli("localhost", "root", "asd.456", "db_sistem_negocio");
 			/* verificar conexión */
 			if (mysqli_connect_errno()) {
     			printf("Connect failed: %s\n", mysqli_connect_error());
