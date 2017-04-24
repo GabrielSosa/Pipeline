@@ -29,7 +29,7 @@ function scripts(){
 			'<!--common scripts for all pages-->'.
 			'<script src="js/CalculadoraPrincipal.js"></script>'.
 			'<script src="js/scripts.js"></script>'.
-			
+			'<script src="js/tooltip.js"></script>'.
 			'<!--Javascript en proyectos-->'.    
 		    '<script src="media/js/dataTables.bootstrap.min.js"></script>';       
 		    

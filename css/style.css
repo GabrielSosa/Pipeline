@@ -19,6 +19,13 @@ body {
     font-size: 14px;
 }
 
+.tooltip-inner  {
+
+   white-space: normal;
+    min-width:200px;
+
+}
+
 input, select, textarea {
     font-family: 'Open Sans', sans-serif;
     color: #767676;

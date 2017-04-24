@@ -32,18 +32,18 @@ if($IP != 0)
 
                 <div class="modal-body">
                     <form role="form" action="proyectos/ejecutarInversionP.php" method="post" class="f1">
-                        <h3>Registro de Inversion Permanente</h3>
+                        <h3>Registro de Inversión Permanente</h3>
 						
 						
                         
 							
                                 <div class="form-group">
                                     <label class="sr-only">cantidad depositada hoy</label>
-                                    <input type="number"  name="cantidad_depositadapro" placeholder="cantidad depositada" class="form-control" id="cantidad_depositadapro" required>
+                                    <input type="number"  name="cantidad_depositadapro" placeholder="cantidad depositada" class="form-control" id="cantidad_depositadapro" data-toggle="tooltip" data-placement="right" title="Aveces se desea invertir en ahorros, esta cantidad representa la cantidad de dinero depositada para generar intereses a favor" required>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">cantidad a retirar indefinida mente</label>
-                                    <input type="number" name="cantidad_retirarpro" placeholder="cantidad a retirar" class="form-control" id="cantidad_retirarpro" required>
+                                    <label class="sr-only" for="f1-last-name">cantidad a retirar indefinidamente</label>
+                                    <input type="number" name="cantidad_retirarpro" placeholder="cantidad a retirar" class="form-control" id="cantidad_retirarpro" data-toggle="tooltip" data-placement="right" title="Cantidad que se desea retirar por concepto de intereses generados a favor" required>
 									<input type="hidden" name="idProyecto" value=<?php echo $idProyecto;?> />
 							   </div>
                            

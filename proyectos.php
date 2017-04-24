@@ -234,10 +234,6 @@ $conn = $conexion->getConexion();
 <script src="js/retina-1.1.0.min.js"></script>
 <script src="js/scriptsModal.js"></script>
 
-<script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); 
-    });
-</script>
+
 
 </html>

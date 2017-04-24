@@ -59,11 +59,11 @@ if($CostoCapital != 0)
                             <h4>Acerca del proyecto:</h4>
                                 <div class="form-group">
                                     <label class="sr-only">Costo Inicial</label>
-                                    <input type="number"  name="costoInicialPro" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialPro" required>
+                                    <input type="number"  name="costoInicialPro" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialPro" data-toggle="tooltip" data-placement="right" title="Cantidad con la que se piensa iniciar" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Inversion Global</label>
-                                    <input type="number" name="inversionGlobalPro" placeholder="Inversion global del proyecto" class="form-control" id="inversionGlobalPro" required>
+                                    <input type="number" name="inversionGlobalPro" placeholder="Inversion global del proyecto" class="form-control" id="inversionGlobalPro" data-toggle="tooltip" data-placement="right" title="Cantidad total de efectivo que se invierte de inicio a fin en el proyecto" required>
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-next btn btn-primary">Siguiente</button>
@@ -76,15 +76,15 @@ if($CostoCapital != 0)
                             <h4>Acerca de la Alternativa:</h4>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Costo Inicial</label>
-                                    <input type="number" name="costoInicialAlt" placeholder="costo Inicial de la Alternativa" class="form-control" id="costoInicialAlt" required>
+                                    <input type="number" name="costoInicialAlt" placeholder="costo Inicial de la Alternativa" class="form-control" id="costoInicialAlt" data-toggle="tooltip" data-placement="right" title="Cantidad con la que se piensa iniciar la opción alternativa" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Inversion Global</label>
-                                    <input type="number"  name="inversionGlobalAlt" placeholder="Ingresa la inversion de la Alternativa" class="form-control" id="inversionGlobalPro" required>
+                                    <input type="number"  name="inversionGlobalAlt" placeholder="Ingresa la inversion de la Alternativa" class="form-control" id="inversionGlobalPro" data-toggle="tooltip" data-placement="right" title="Cantidad total de efectivo que se invierte de inicio a fin en el proyecto" required>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-password">Interes</label>
-                                    <input type="number"  name="interesAlt" placeholder="Interes de la Alternativa" class="form-control" id="interesAlt" required>
+                                    <label class="sr-only" for="f1-password">Interés</label>
+                                    <input type="number"  name="interesAlt" placeholder="Interés de la Alternativa" class="form-control" id="interesAlt" data-toggle="tooltip" data-placement="right" title="Cantidad total de efectivo que se se pagará por concepto de intereses, esto puede ser cero si se utilizan fondos propios" required>
                                     <input type="hidden" name="idProyectoCosto" value=<?php echo $idProyectoCost;?> />
                                 </div>
                                 <div class="f1-buttons">

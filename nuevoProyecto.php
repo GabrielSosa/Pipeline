@@ -55,49 +55,49 @@
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Nombre del Proyecto</label>
                                         <div class="col-xs-5">
-                                            <input type="text" placeholder="Detalla el nombre" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="nombreProyecto" required/>
+                                            <input type="text" placeholder="Detalla el nombre" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="nombreProyecto" data-toggle="tooltip" data-placement="right" title="Puedes especificar el nombre con el que quieres que sea identificado tu proyecto"  required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Descripcion</label>
                                         <div class="col-xs-5">
-                                            <input type="text" placeholder="Detalla en que consiste el proyecto" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="descripcion" required/>
+                                            <input type="text" placeholder="Detalla en que consiste el proyecto" pattern="[(a-z)|(A-Z)|(\s)|(á)|(é)|(i)|(ó)|(ú)]*" class="form-control" name="descripcion" data-toggle="tooltip" data-placement="right" title="Una buena descripción ayudaría a comprender mejor tu proyecto"  required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Períodos</label>
                                         <div class="col-xs-5">
-                                            <input type="text" placeholder="Cantidad de periodos en que trabajara" pattern = "[0-9]+" class="form-control" name="n" onkeypress="return isNumberKey(event)" required/>
+                                            <input type="text" placeholder="Cantidad de periodos en que trabajara" pattern = "[0-9]+" class="form-control" name="n" data-toggle="tooltip" data-placement="right" title="Los periodos pueden ser los mismos años o puede variar segun lo que establezca el banco y el respectivo contrato" onkeypress="return isNumberKey(event)" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Tiempo en Meses</label>
                                         <div class="col-xs-5">
-                                            <input type="text" placeholder="Cantidad de meses que trabajara" pattern = "[0-9]+" class="form-control" name="t" onkeypress="return isNumberKey(event)" required/>
+                                            <input type="text" placeholder="Cantidad de meses que trabajara" pattern = "[0-9]+" class="form-control" name="t" data-toggle="tooltip" data-placement="right" title="El tiempo en meses que se planea que dure el proyecto"  onkeypress="return isNumberKey(event)" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Interés</label>
                                         <div class="col-xs-5">
-                                            <input type="text" placeholder="Interes que necesitas pagar en %" pattern = "[0-9]+" class="form-control" name="i" required/>
+                                            <input type="text" placeholder="Interés que necesitas pagar en %" pattern = "[0-9]+" class="form-control" name="i"  data-toggle="tooltip" data-placement="right" title="La tasa de interés que se va a pagar en caso de un prestamo. Puede ser cero si se utilizan fondos propios" required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Monto del Préstamo</label>
                                         <div class="col-xs-5">
-                                            <input type="text" placeholder="Cantidad de dinero prestado para el proyecto" pattern = "[0-9]+" class="form-control" name="montoPrestamo" required/>
+                                            <input type="text" placeholder="Cantidad de dinero prestado para el proyecto" pattern = "[0-9]+" class="form-control" name="montoPrestamo" data-toggle="tooltip" data-placement="right" title="Si no hay un préstamo esto equivale a la cantidad de dinero que se piensa invertir en el proyecto"  required/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-xs-3 control-label">Fecha de Inicio</label>
                                         <div class="col-xs-5">
-                                            <input type="date" placeholder="Fecha en que inicias el proyecto" class="form-control" name="fechaInicio" required/>
+                                            <input type="date" placeholder="Fecha en que inicias el proyecto" class="form-control" name="fechaInicio" data-toggle="tooltip" data-placement="right" title="Indica a partir de cuándo se comienzan a hacer los cálculos "  required/>
                                         </div>
                                     </div>
 
@@ -116,5 +116,6 @@
 </section>
 
 <?php echo scripts(); ?>
+
 </body>
 </html>

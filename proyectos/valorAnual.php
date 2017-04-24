@@ -46,38 +46,38 @@ if($CostoCapital != 0)
                             <h4>Acerca del proyecto:</h4>
                                 <div class="form-group">
                                     <label class="sr-only">Costo Inicial</label>
-                                    <input type="number"  name="costoInicialPro" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialPro" required>
+                                    <input type="number"  name="costoInicialPro" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialPro" data-toggle="tooltip" data-placement="right" title="Cantidad con la que se piensa iniciar"  required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Interés</label>
-                                    <input type="number" name="interesPro" placeholder="Interés" class="form-control" id="interesPro" required>
+                                    <input type="number" name="interesPro"  placeholder="Interés" class="form-control" id="interesPro" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero generada a favor por concepto de intereses" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Valor Salvamento</label>
-                                    <input type="number" name="valorSalvamentoPro" placeholder="Valor Salvamento" class="form-control" id="valorSalvamentoPro" required>
+                                    <input type="number" name="valorSalvamentoPro" placeholder="Valor Salvamento" class="form-control" id="valorSalvamentoPro" data-toggle="tooltip" data-placement="right" title="El valor salvamento es esa cantidad de dinero que puede ayudar a la inversión inicial en caso que exista una emergencia"  required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Periodo</label>
-                                    <input type="number" name="periodoPro" placeholder="Período" class="form-control" id="periodoPro" required>
+                                    <input type="number" name="periodoPro" placeholder="Período" class="form-control" id="periodoPro" data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco" required>
                                 </div>
                                 
                     
                             <h4>Acerca de la Propuesta:</h4>
                                 <div class="form-group">
                                     <label class="sr-only">Costo Inicial</label>
-                                    <input type="number"  name="costoInicialAlt" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialAlt" required>
+                                    <input type="number"  name="costoInicialAlt" placeholder="costo Inicial del proyecto" class="form-control" id="costoInicialAlt" data-toggle="tooltip" data-placement="right" title="Cantidad con la que se piensa iniciar" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Interés</label>
-                                    <input type="number" name="interesAlt" placeholder="Interés" class="form-control" id="interesAlt" required>
+                                    <input type="number" name="interesAlt" placeholder="Interés" class="form-control" id="interesAlt" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero generada a favor por concepto de intereses" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Valor Salvamento</label>
-                                    <input type="number" name="valorSalvamentoAlt" placeholder="Valor Salvamento" class="form-control" id="valorSalvamentoAlt" required>
+                                    <input type="number" name="valorSalvamentoAlt" placeholder="Valor Salvamento" class="form-control" id="valorSalvamentoAlt" data-toggle="tooltip" data-placement="right" title="El valor salvamento es esa cantidad de dinero que puede ayudar a la inversión inicial en caso que exista una emergencia" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Periodo</label>
-                                    <input type="number" name="periodoAlt" placeholder="Período" class="form-control" id="periodoAlt" required>
+                                    <input type="number" name="periodoAlt" placeholder="Período" class="form-control" id="periodoAlt" data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco" required>
                                     <input type="hidden" name="idProyectoCosto" value=<?php echo $idProyectoCost;?> />
                                 </div>
                                 <div class="f1-buttons">

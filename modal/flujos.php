@@ -16,14 +16,14 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Entrada de Efectivo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="En_Efec_Ne_cp1" />
+                                                            <input type="text" class="form-control" id="En_Efec_Ne_cp1" data-toggle="tooltip" data-placement="right" title="Cantidad total de efectivo que ingresó a las cuentas por concepto de ventas" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Salida de Efectivo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="Sa_Efec_Ne_cp1" />
+                                                            <input type="text" class="form-control" id="Sa_Efec_Ne_cp1" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero que salió por cuestion de gastos, pagos u otros motivos" />
                                                         </div>
                                                      </div> 
 
@@ -67,21 +67,22 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Cantidad Base de Dinero</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="cantidad_base_cp2" />
+                                                            <input type="text" class="form-control" id="cantidad_base_cp2" data-toggle="tooltip" data-placement="right" title="Esta es la cantidad con la cual se comenzó el periodo en cuestión"/>
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Periodo de Tiempo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_7_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_7_cp2" data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco"/>
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Gradiente</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="gradiante_cp2" />
+                                                            <input type="text" class="form-control" id="gradiante_cp2" data-toggle="tooltip" data-placement="right" title="es una serie de flujos de efectivo que aumenta o disminuye
+                                                            en una cantidad constante. Es decir, el flujo de efectivo, ya sea ingreso o desembolso, cambia por la misma cantidad aritmética cada periodo."/>
                                                         </div>
                                                      </div>  
 

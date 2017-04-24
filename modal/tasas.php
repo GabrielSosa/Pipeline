@@ -17,14 +17,14 @@
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto del Préstamo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="ts_monto_cp1" />
+                                                            <input type="text" class="form-control" id="ts_monto_cp1" data-toggle="tooltip" data-placement="right" title="Monto total prestado" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Interés Acumulado (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="interes_acumulado_cp1" />
+                                                            <input type="text" class="form-control" id="interes_acumulado_cp1" data-toggle="tooltip" data-placement="right" title="Porcentaje de la tasa de interés que se desea calcular" />
                                                         </div>
                                                      </div>  
 
@@ -68,14 +68,14 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto Prestado</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente_rendimiento_cp1" />
+                                                            <input type="text" class="form-control" id="valor_presente_rendimiento_cp1" data-toggle="tooltip" data-placement="right" title="Monto total prestado" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Interes ya Pagado</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="interes_acumulado_rendimiento_cp1" />
+                                                            <input type="text" class="form-control" id="interes_acumulado_rendimiento_cp1" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero pagada en concepto de intereses" />
                                                         </div>
                                                      </div>  
 
@@ -120,14 +120,14 @@
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Interés por Periodo (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="interes_periodos3_cp4" />
+                                                            <input type="text" class="form-control" id="interes_periodos3_cp4" data-toggle="tooltip" data-placement="right" title="Porcentaje de la tasa de interés que se desea calcular" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Periodos</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="num_periodos_cp4" />
+                                                            <input type="text" class="form-control" id="num_periodos_cp4" data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco" />
                                                         </div>
                                                      </div>  
 
@@ -171,21 +171,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Periodo de Tiempo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="te_t_cp4" />
+                                                            <input type="text" class="form-control" id="te_t_cp4" data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Fecuencia de Composición</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="te_m_cp4" />
+                                                            <input type="text" class="form-control" id="te_m_cp4" data-toggle="tooltip" data-placement="right" title="es el número de veces que la capitalización m ocurre dentro del periodo de tiempo t" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Tasa de Interés Nominal Anual</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="te_r_cp4" />
+                                                            <input type="text" class="form-control" id="te_r_cp4" data-toggle="tooltip" data-placement="right" title="Porcentaje de la tasa de interés que se desea calcular" />
                                                         </div>
                                                      </div>  
 
@@ -230,14 +230,14 @@
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Periodos</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="t_pc_m_cp4" />
+                                                            <input type="text" class="form-control" id="t_pc_m_cp4"  data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco"/>
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Tasa de Interés Efectiva por Periodo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="t_pc_cp4" />
+                                                            <input type="text" class="form-control" id="t_pc_cp4" data-toggle="tooltip" data-placement="right" title="Porcentaje de la tasa de interés que se desea calcular" />
                                                         </div>
                                                      </div>  
 
@@ -281,14 +281,14 @@
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Periodos de Composición por Año</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tie_pc_m_cp4" />
+                                                            <input type="text" class="form-control" id="tie_pc_m_cp4" data-toggle="tooltip" data-placement="right" title="El año puede estar dividido en varios periodos ya sea cada uno, dos, tres meses o más" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Tasa de Interes Efectiva Anual</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tie_pc_i_cp4" />
+                                                            <input type="text" class="form-control" id="tie_pc_i_cp4" data-toggle="tooltip" data-placement="right" title="Porcentaje de la tasa de interés que se desea calcular" />
                                                         </div>
                                                      </div>  
 

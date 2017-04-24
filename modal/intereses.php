@@ -16,21 +16,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente2_cp1" />
+                                                            <input type="text" class="form-control" id="valor_presente2_cp1" data-toggle="tooltip" data-placement="right" title="Esto es la cantidad total a la que se le calculará el interés" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Periodo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="numero_de_periodos_cp1" />
+                                                            <input type="text" class="form-control" id="numero_de_periodos_cp1" data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Interes (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_de_interes_cp1" />
+                                                            <input type="text" class="form-control" id="tasa_de_interes_cp1" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -74,21 +74,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente3_cp1" />
+                                                            <input type="text" class="form-control" id="valor_presente3_cp1" data-toggle="tooltip" data-placement="right" title="Esto es la cantidad total a la que se le calculará el interés" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Periodo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="numero_de_periodos1_cp1" />
+                                                            <input type="text" class="form-control" id="numero_de_periodos1_cp1" data-toggle="tooltip" data-placement="right" title="El periodo pueden ser los mismos años o puede variar según lo que establece el banco" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Interes(%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_de_interes1_cp1" />
+                                                            <input type="text" class="form-control" id="tasa_de_interes1_cp1" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -132,14 +132,14 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Saldo Pagado</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente4_cp1" />
+                                                            <input type="text" class="form-control" id="valor_presente4_cp1"  data-toggle="tooltip" data-placement="right" title="El saldo que ya se ha pagado al banco hasta la fecha"/>
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Monto del Préstamo</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_futuro4_cp1" />
+                                                            <input type="text" class="form-control" id="valor_futuro4_cp1"  data-toggle="tooltip" data-placement="right" title="Monto total prestado"/>
                                                         </div>
                                                      </div>
 

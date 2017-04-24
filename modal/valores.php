@@ -16,21 +16,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">valor Futuro</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_futuro_cp2" />
+                                                            <input type="text" class="form-control" id="valor_futuro_cp2" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero en el futuro de la cual se desea saber el equivalente en el tiempo actual" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_2_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_2_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Interes</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_2_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_2_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -74,21 +74,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Presente</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente_cp2" />
+                                                            <input type="text" class="form-control" id="valor_presente_cp2" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero en la actualidad de la cual se desea saber el equivalente en el tiempo futuro" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Interes (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -133,21 +133,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Anual Uniforme</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente2_cp1" />
+                                                            <input type="text" class="form-control" id="valor_presente2_cp1" data-toggle="tooltip" data-placement="right" title="Una Anualidad es la cantidad fija que se paga en un año" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_anual_cp2" />
+                                                            <input type="text" class="form-control" id="valor_anual_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Tasa de Interés (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_3_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_3_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -191,21 +191,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Presente Uniforme</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente_2_cp2" />
+                                                            <input type="text" class="form-control" id="valor_presente_2_cp2" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero en la actualidad de la cual se desea saber el equivalente en el tiempo" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_4_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_4_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Tasa de Interés (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_4_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_4_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
  
@@ -250,21 +250,21 @@
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Futuro</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_futuro_2_cp2" />
+                                                            <input type="text" class="form-control" id="valor_futuro_2_cp2" data-toggle="tooltip" data-placement="right" title="Valor equivalente al actual pero en el futuro" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_5_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_5_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Tasa de Interés (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_5_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_5_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>   
 
@@ -308,21 +308,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Anual</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_anual_2_cp2" />
+                                                            <input type="text" class="form-control" id="valor_anual_2_cp2" data-toggle="tooltip" data-placement="right" title="Una Anualidad es la cantidad fija que se paga en un año" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_6_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_6_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
-                                                        <label class="col-xs-3 control-label">Interes</label>
+                                                        <label class="col-xs-3 control-label">Interés</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_6_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_6_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -366,21 +366,22 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Gradiente</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="gradiante_2_cp2" />
+                                                            <input type="text" class="form-control" id="gradiante_2_cp2" data-toggle="tooltip" data-placement="right" title="es una serie de flujos de efectivo que aumenta o disminuye
+                                                            en una cantidad constante. Es decir, el flujo de efectivo, ya sea ingreso o desembolso, cambia por la misma cantidad aritmética cada periodo."" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años </label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_8_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_8_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
-                                                        <label class="col-xs-3 control-label">Tasa de Interes (%)</label>
+                                                        <label class="col-xs-3 control-label">Tasa de Interés (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_7_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_7_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -424,21 +425,22 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Gradiente</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="gradiante_4_cp2" />
+                                                            <input type="text" class="form-control" id="gradiante_4_cp2" data-toggle="tooltip" data-placement="right" title="es una serie de flujos de efectivo que aumenta o disminuye
+                                                            en una cantidad constante. Es decir, el flujo de efectivo, ya sea ingreso o desembolso, cambia por la misma cantidad aritmética cada periodo." />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="periodo_tiempo_10_cp2" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_10_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
-                                                        <label class="col-xs-3 control-label">Tasa de Interes (%)</label>
+                                                        <label class="col-xs-3 control-label">Tasa de Interés (%)</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="tasa_interes_9_cp2" />
+                                                            <input type="text" class="form-control" id="tasa_interes_9_cp2" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 
@@ -482,21 +484,21 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Presente</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="vf_p_cp4" />
+                                                            <input type="text" class="form-control" id="vf_p_cp4" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero en la actualidad de la cual se desea saber el equivalente en el tiempo" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Capitalización</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="vf_m_cp4" />
+                                                            <input type="text" class="form-control" id="vf_m_cp4" data-toggle="tooltip" data-placement="right" title="unidad de tiempo más corta durante la que se paga o gana interés" />
                                                         </div>
                                                      </div>
 
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Tasa de Interés</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="vf_i_cp4" />
+                                                            <input type="text" class="form-control" id="vf_i_cp4" data-toggle="tooltip" data-placement="right" title="Porcentaje adicional que se pagará sobre la cantidad prestada" />
                                                         </div>
                                                      </div>  
 

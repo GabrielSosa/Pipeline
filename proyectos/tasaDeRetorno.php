@@ -52,16 +52,16 @@ else
                            
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Interés</label>
-                                    <input type="number" name="interesPro" placeholder="Interés" class="form-control" id="interesPro" required/>
+                                    <input type="number" name="interesPro" placeholder="Interés" class="form-control" id="interesPro" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero generada a favor por concepto de intereses" required/>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only">Flujo De Efectivo</label>
-                                    <input type="number"  name="flujoPro" placeholder="Flujo De Efectivo" class="form-control" id="flujoEfectivoPro" required/>
+                                    <input type="number" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero que esta en movimiento que es la que genera intereses a favor" name="flujoPro" placeholder="Flujo De Efectivo" class="form-control" id="flujoEfectivoPro" required/>
                                 </div>
                               
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Saldo Inicial No Recuperado</label>
-                                    <input type="number" name="saldoPro" placeholder="Saldo Inicial No Recuperado" class="form-control" id="saldoInicialPro" required/>
+                                    <input type="number" name="saldoPro" placeholder="Saldo Inicial No Recuperado" class="form-control" id="saldoInicialPro" data-toggle="tooltip" data-placement="right" title="Existe un saldo inicial que no se recupera ya que es la inversión inicial para generar intereses" required/>
                                 </div>
                                 <div class="form-group">
                                     
@@ -76,16 +76,16 @@ else
                             
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Interés</label>
-                                    <input type="number" name="interesAlt" placeholder="Interés" class="form-control" id="interesAlt" required/>
+                                    <input type="number" name="interesAlt" placeholder="Interés" class="form-control" id="interesAlt" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero generada a favor por concepto de intereses" required/>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only">Flujo De Efectivo</label>
-                                    <input type="number"  name="flujoAlt" placeholder="Flujo De Efectivo" class="form-control" id="flujoAlt" required/>
+                                    <input type="number" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero que esta en movimiento que es la que genera intereses a favor" name="flujoAlt" placeholder="Flujo De Efectivo" class="form-control" id="flujoAlt" required/>
                                 </div>
                               
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Saldo Inicial No Recuperado</label>
-                                    <input type="number" name="saldoAlt" placeholder="Saldo Inicial No Recuperado" class="form-control" id="saldoAlt" required/>
+                                    <input type="number" name="saldoAlt" placeholder="Saldo Inicial No Recuperado" class="form-control" id="saldoAlt" data-toggle="tooltip" data-placement="right" title="Existe un saldo inicial que no se recupera ya que es la inversión inicial para generar intereses" required/>
                                 </div>
                                 <div class="form-group">
                                     
@@ -99,16 +99,16 @@ else
                             
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Interés</label>
-                                    <input type="number" name="interesAlt1" placeholder="Interés" class="form-control" id="interesAlt1" required/>
+                                    <input type="number" name="interesAlt1" placeholder="Interés" class="form-control" id="interesAlt1" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero generada a favor por concepto de intereses" required/>
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only">Flujo De Efectivo</label>
-                                    <input type="number"  name="flujoAlt1" placeholder="Flujo De Efectivo" class="form-control" id="flujoAlt1" required/>
+                                    <input type="number" data-toggle="tooltip" data-placement="right" title="Cantidad de dinero que esta en movimiento que es la que genera intereses a favor" name="flujoAlt1" placeholder="Flujo De Efectivo" class="form-control" id="flujoAlt1" required/>
                                 </div>
                               
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-last-name">Saldo Inicial No Recuperado</label>
-                                    <input type="number" name="saldoAlt1" placeholder="Saldo Inicial No Recuperado" class="form-control" id="saldoAlt1" required/>
+                                    <input type="number" name="saldoAlt1" placeholder="Saldo Inicial No Recuperado" class="form-control" id="saldoAlt1" data-toggle="tooltip" data-placement="right" title="Existe un saldo inicial que no se recupera ya que es la inversión inicial para generar intereses" required/>
                                 </div>
                                 <div class="form-group">
                                     
