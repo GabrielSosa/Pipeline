@@ -133,14 +133,14 @@
                                                     <div class="form-group">
                                                         <label class="col-xs-3 control-label">Valor Anual Uniforme</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_presente2_cp1" data-toggle="tooltip" data-placement="right" title="Una Anualidad es la cantidad fija que se paga en un año" />
+                                                            <input type="text" class="form-control" id="valor_anual_cp2" data-toggle="tooltip" data-placement="right" title="Una Anualidad es la cantidad fija que se paga en un año" />
                                                         </div>
                                                      </div> 
                                                      
                                                      <div class="form-group">
                                                         <label class="col-xs-3 control-label">Número de Años</label>
                                                         <div class="col-xs-5">
-                                                            <input type="text" class="form-control" id="valor_anual_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
+                                                            <input type="text" class="form-control" id="periodo_tiempo_3_cp2" data-toggle="tooltip" data-placement="right" title="La cantidad de años en que se quiere saber el valor" />
                                                         </div>
                                                      </div>
 

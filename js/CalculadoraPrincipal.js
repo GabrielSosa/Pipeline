@@ -80,6 +80,7 @@ function FlujoEfectivoNeto_cp1(){
 
             document.getElementById("valor_presente_inicial_cp2").value=Math.round((valor_futuro/Math.pow(tasa_interes+1,periodo_tiempo)));
         }
+        
         function valor_presente_serie_uniforme_cp2(){
             var valor_anual=parseFloat(document.getElementById("valor_anual_cp2").value);
             var tasa_interes=parseFloat(document.getElementById("tasa_interes_3_cp2").value)/100;

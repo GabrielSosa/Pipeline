@@ -142,7 +142,7 @@ $conn = $conexion->getConexion();
 
                             <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
-                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
                               </button>
                             </form>
@@ -155,7 +155,7 @@ $conn = $conexion->getConexion();
 
                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
-                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
                               </button>
                             </form>
@@ -168,7 +168,7 @@ $conn = $conexion->getConexion();
 
                             <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
-                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad" >
                                   <span class="fa fa-file-text"></span>
                               </button>
                             </form>
@@ -179,7 +179,7 @@ $conn = $conexion->getConexion();
                             <div id="inversionP4" class="tab-pane"> 
                             <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
-                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
                               </button>
                             </form>
@@ -191,7 +191,7 @@ $conn = $conexion->getConexion();
 
                              <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
-                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
                               </button>
                             </form>
@@ -202,7 +202,7 @@ $conn = $conexion->getConexion();
                             <div id="comparacionVA" class="tab-pane"> 
                             <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
-                              <button style="float:right;" type="submit" class="btn btn-default btn-sm">
+                              <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
                               </button>
                             </form>
