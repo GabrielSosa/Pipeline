@@ -140,7 +140,7 @@ $conn = $conexion->getConexion();
 
                             <div id="interesS4" class="tab-pane active">
 
-                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="decisiones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
                               <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
@@ -153,7 +153,7 @@ $conn = $conexion->getConexion();
 
                             <div id="intersC4" class="tab-pane">
 
-                           <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                           <form id="DesicionForm" method="get" class="form-horizontal" action="decisiones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
                               <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
@@ -166,7 +166,7 @@ $conn = $conexion->getConexion();
 
                             <div id="CostoC4" class="tab-pane"> 
 
-                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="decisiones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
                               <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad" >
                                   <span class="fa fa-file-text"></span>
@@ -177,7 +177,7 @@ $conn = $conexion->getConexion();
                             </div> 
                             
                             <div id="inversionP4" class="tab-pane"> 
-                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="decisiones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
                               <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
@@ -189,7 +189,7 @@ $conn = $conexion->getConexion();
                             
                              <div id="tasaR4" class="tab-pane"> 
 
-                             <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                             <form id="DesicionForm" method="get" class="form-horizontal" action="decisiones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
                               <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>
@@ -200,7 +200,7 @@ $conn = $conexion->getConexion();
                             </div>
 
                             <div id="comparacionVA" class="tab-pane"> 
-                            <form id="DesicionForm" method="get" class="form-horizontal" action="desiciones.php"> 
+                            <form id="DesicionForm" method="get" class="form-horizontal" action="decisiones.php"> 
                               <input type="hidden" name="idProyecto" value=<?php echo $id;?>>
                               <button style="float:right;" type="submit" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="left" title="Presione el siguiente boton para ver la factibilidad">
                                   <span class="fa fa-file-text"></span>

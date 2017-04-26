@@ -66,7 +66,7 @@ function menu(){
 
 		                '<li><a href="mapa.php"><i class="fa fa-map-marker"></i> <span>Mapas</span></a></li>'.
 
-		                '<li><a href="desiciones.php"><i class="fa fa-file-text"></i> <span>Desiciones</span></a></li>'.
+		                '<li><a href="decisiones.php"><i class="fa fa-file-text"></i> <span>Desiciones</span></a></li>'.
 
 		                '<li><a href="logout.php"><i class="fa fa-sign-in"></i> <span>Cerrar Sesión</span></a></li>'.
 
