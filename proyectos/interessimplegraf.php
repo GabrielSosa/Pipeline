@@ -1,7 +1,7 @@
 <?php
 
 
-$idproyecto=$_GET['id'];
+$idproyecto=$_SESSION['id_proyecto'];
 
 ?>
 

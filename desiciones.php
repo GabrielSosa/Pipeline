@@ -47,8 +47,10 @@
 
   
 <?php
+
 // echo '<dir id="fotos"></dir>';
-$idProyecto = $_GET[idProyecto];
+
+$idProyecto = $_SESSION['id_proyecto'];
 if (isset($idProyecto)){ 
 
 include 'Backend/conexion.php';

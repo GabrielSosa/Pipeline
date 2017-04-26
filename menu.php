@@ -62,7 +62,7 @@ function menu(){
 
 		                '<li><a href="quienesomos.php"><i class="fa fa-user"></i> <span>Quienes Somos</span></a></li>'.
 
-		                '<li><a href=""><i class="fa fa-bar-chart-o"></i> <span>Graficos</span></a></li>'.
+		                '<li><a href="graficos.php"><i class="fa fa-bar-chart-o"></i> <span>Graficos</span></a></li>'.
 
 		                '<li><a href="mapa.php"><i class="fa fa-map-marker"></i> <span>Mapas</span></a></li>'.
 

@@ -1,7 +1,8 @@
 <?php
 
 
-$idproyecto=$_GET['id'];
+$idproyecto=$_SESSION['id_proyecto'];
+
 
 $conexion = new Conexion();
 $querycostograf="SELECT costo_capitalizado_1, costo_capitalizado_2 FROM tbl_resultados  where id_proyecto = $idproyecto";
