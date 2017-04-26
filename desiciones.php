@@ -47,10 +47,8 @@
 
   
 <?php
-
 // echo '<dir id="fotos"></dir>';
-
-$idProyecto = $_SESSION['id_proyecto'];
+$idProyecto = $_GET["idProyecto"];
 if (isset($idProyecto)){ 
 
 include 'Backend/conexion.php';
@@ -65,11 +63,19 @@ foreach ($results as $resultado) {
 }
 
 if($ValorAnual>0){
+  echo '<div class="col-md-6 col-md-offset-3">';
   echo'<link rel="stylesheet" type="text/css" href="animacion/cssani/animation.css">';
   echo'<dir id="fotos"></dir>';
+  echo '<h1 class="page-header"> Felicidades, su proyecto es viable :) </h1>';
+  echo '<div >Según los datos que usted nos ha proporcionado, concluimos que su proyecto es viable dentro del periodo en que se ha definido, por tanto el capital invertido podrá ser financiado, y existe con una enorme probabilidad de generar utilidades en un futuro.</div>';
+  echo '</div>';
 }else{
+  echo '<div class="col-md-6 col-md-offset-3">';
   echo'<link rel="stylesheet" type="text/css" href="animacion/cssani/animation2.css">';
   echo'<dir id="fotos2"></dir>';
+  echo '<h1 class="page-header"> Lo sentimos, su proyecto no es viable :( </h1>';
+  echo '<div >Según los datos que usted nos ha proporcionado, concluimos que su proyecto no es viable dentro del periodo en que se ha definido, por tanto el capital invertido difícilmente podrá ser recuperado, y existe con una enorme probabilidad de obtener pérdidas.</div>';
+  echo '</div>';
 }
 
 $conexionDesicion->cerrarConexion();
@@ -84,7 +90,7 @@ $conexionDesicion->cerrarConexion();
 
 
 </div>	
-
+<div style="align-content: center;"></div>
 </div>
 
 </section>
